@@ -1,0 +1,146 @@
+#Hi the name's HashBang, and this is my polybar config.
+#You can find my  GitLab at https://gitlab.com/IveGotRoot where I should have some interesting projects, and some dotfiles such as this.
+
+[vars]
+padding = 1
+
+[colors]
+    background = #1E1D2F
+    foreground = #D9E0EE
+    black = #6E6C7E
+    rosewater = #F5E0DC
+    flamingo = #F2CDCD
+    mauve = #DDB6F2
+    pink = #F5C2E7
+    maroon = #E8A2AF
+    red = #F28FAD 
+    peach = #F8BD96
+    yellow = #FAE380
+    green = #ABE9B3
+    teal = #B5E8E0
+    sky = #89DCEB
+    blue = #96CDFB
+    lavender = #C9CBFF 
+[bar/main]
+
+border-size = 4
+border-color = ${colors.black}
+
+height = 32
+offset-x = 12
+offset-y = 12
+width = 1896
+; margin-bottom = 0
+
+modules-left = hostname bspwm
+modules-center = title
+modules-right =  ethernet wifi time battery
+
+font-0 = JetBrains Mono Nerd Font
+
+background = ${colors.background}
+foreground = ${colors.black}
+
+; override-redirect = true
+; wm-restack = bspwm
+
+[module/hostname]
+type = custom/text
+content = Thomas@TheLinuxSlate
+
+content-background = ${colors.red}
+content-padding = ${vars.padding}
+
+[module/bspwm]
+type = internal/bspwm
+label-focused = " "
+label-empty = " "
+label-urgent = " "
+label-occupied = " "
+
+pin-workspaces = true
+inline-mode = false
+enable-click = false
+enable-scroll = false
+reverse-scroll = false
+fuzzy-match = true
+
+format-background = ${colors.peach}
+format-padding = ${vars.padding}
+
+[module/title]
+type = internal/xwindow
+format = <label>
+label = %title%
+
+[module/memory]
+type = internal/memory 
+label =  %gb_used% 
+;/%gb_total%
+
+[module/cpu]
+type = internal/cpu
+label =  %percentage%%
+
+[module/ethernet]
+type = internal/network
+interface = eth0
+
+format-connected =  <label-connected>
+label-connected = %downspeed%
+format-padding = ${vars.padding}
+format-connected-background = ${colors.teal}
+
+[module/wifi]
+type = internal/network
+interface = wlan0
+
+format-connected = <label-connected>
+label-connected = 直 Connected
+format-disconnected = <label-disconnected>
+label-disconnected = 睊 Disconnected
+format-connected-padding = ${vars.padding}
+format-disconnected-padding = ${vars.padding}
+format-disconnected-background = ${colors.sky}
+format-connected-background = ${colors.sky}
+[module/time]
+type = internal/date
+date = %Y-%m-%d%
+time = %H:%M
+label = %date% %time%
+format =  <label>
+
+format-background = ${colors.blue}
+format-padding = ${vars.padding}
+
+[module/battery]
+type = internal/battery
+
+battery = BAT1
+adapter = ACAD
+
+format-full = <ramp-capacity> <label-full>
+label-full = " %percentage%%"
+ramp-capacity-0 =  
+ramp-capacity-1 =   
+ramp-capacity-2 =   
+ramp-capacity-3 =  
+ramp-capacity-4 =   
+
+format-charging = <animation-charging> <label-charging>
+label-charging = " %percentage%%"
+animation-charging-0 =  
+animation-charging-1 =  
+animation-charging-2 =  
+animation-charging-3 =  
+animation-charging-4 =  
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = " %percentage%%"
+
+format-charging-padding = ${vars.padding}
+format-charging-background = ${colors.lavender}
+format-discharging-padding = ${vars.padding}
+format-discharging-background = ${colors.lavender}
+format-full-padding = ${vars.padding}
+format-full-background = ${colors.lavender}
