@@ -23,8 +23,8 @@ XF86Audio{Prev,Next}
 	playerctl {previous,next}
 
 # Brightness control
-XF86MonBrightness{Up, Down}
-	brightnessctl set {+5%, 5%-}
+XF86MonBrightness{Up,Down}
+	brightnessctl set {+5%,5%-}
 
 # make sxhkd reload its configuration files:
 super + Escape
