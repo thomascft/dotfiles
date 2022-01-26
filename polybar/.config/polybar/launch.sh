@@ -2,5 +2,4 @@
 
 killall -q polybar
 
-polybar left &
-polybar tray &
+polybar main &

@@ -25,6 +25,10 @@ XF86Audio{Prev,Next}
 # Brightness control
 XF86MonBrightness{Up,Down}
 	brightnessctl set {+5%,5%-}
+Print
+	scrot ~/Pictures/screenshots/%b%d::%H%M%S.png'
+Print + ctrl
+	scrot -s ~/Pictures/screenshots/%b%d::%H%M%S.png'
 
 # make sxhkd reload its configuration files:
 super + Escape

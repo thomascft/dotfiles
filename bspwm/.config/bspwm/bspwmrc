@@ -2,10 +2,10 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d 1 2 3 4 5 6 7 8 9
+bspc monitor -d 1 2 3 4 5
 
-bspc config border_width         4
-bspc config window_gap          14
+bspc config border_width         0
+bspc config window_gap          18
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -14,14 +14,9 @@ bspc config gapless_monocle      true
 bspc rule -a Spotify manage=on desktop=^4 follow=off
 bspc rule -a "Picture in picture" state=floating
 
-#killall -q picom
-#picom --experimental-backend
-
-
-
 #Start/Restart Polybar
 ~/.config/polybar/launch.sh 
 
-#dunst &
+dunst &
 # playerctld daemon
-feh --bg-fill Pictures/wallpapers/unixporn.png
+feh --bg-fill Pictures/wallpapers/urbanStreets.jpg
