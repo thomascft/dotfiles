@@ -12,7 +12,7 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Spotify manage=on desktop=^4 follow=off
-bspc rule -a "Picture in picture" state=floating
+bspc rule -a _NET_WM_STATE_STAYS_ON_TOP state=floating
 
 #Start/Restart Polybar
 ~/.config/polybar/launch.sh 
@@ -20,3 +20,4 @@ bspc rule -a "Picture in picture" state=floating
 dunst &
 # playerctld daemon
 feh --bg-fill Pictures/wallpapers/urbanStreets.jpg
+xsetroot -cursor_name left_ptr 

@@ -4,7 +4,7 @@
     width = 320
     height = 320
     origin = top-right
-    offset = 18x74
+    offset = 26x82
     padding = 10
     horizontal_padding = 10
     text_icon_padding = 0
@@ -27,18 +27,20 @@
     mouse_right_click = close_all
 
 [urgency_low]
-    background = "#232323"
-    foreground = "#a8a8a8"
+    background = "#24283b"
+    foreground = "#a9b1d6"
+    frame_color = "#a9b1d6"
     timeout = 10
 
 [urgency_normal]
-    background = "#232323"
-    foreground = "#a8a8a8"
+    background = "#24283b"
+    foreground = "#a9b1d6"
+    frame_color = "#a9b1d6"
     timeout = 10
 
 [urgency_critical]
-    background = "#d64e4e"
-    foreground = "#f0e0e0"
-    frame_color = "#d64e4e"
+    background = "#f7768e"
+    foreground = "#414868"
+    frame_color = "#414868"
     timeout = 0
     default_icon = /usr/share/icons/Paper/16x16/status/dialog-warning.png

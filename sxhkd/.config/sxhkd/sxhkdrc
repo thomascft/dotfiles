@@ -11,10 +11,9 @@ super + @space
 	rofi -show run	
 
 XF86Audio{RaiseVolume,LowerVolume}
-	amixer set Master {5%+,5%-}
+	pamixer {-i,-d} 5
 XF86AudioMute
-	amixer set Master toggle
-
+	pamixer -m
 XF86AudioPlay
 	playerctl play-pause
 XF86AudioPause
@@ -26,9 +25,12 @@ XF86Audio{Prev,Next}
 XF86MonBrightness{Up,Down}
 	brightnessctl set {+5%,5%-}
 Print
-	scrot ~/Pictures/screenshots/%b%d::%H%M%S.png'
-Print + ctrl
-	scrot -s ~/Pictures/screenshots/%b%d::%H%M%S.png'
+	scrot ~/Pictures/screenshots/%b%d::%H%M%S.png
+ctrl + Print
+	scrot -s ~/Pictures/screenshots/%b%d::%H%M%S.png
+
+super + x
+	alacritty --hold -e xprop  
 
 # make sxhkd reload its configuration files:
 super + Escape

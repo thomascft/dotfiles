@@ -1,4 +1,3 @@
-
 pipewire &
 pipewire-pulse &
 wireplumber &
