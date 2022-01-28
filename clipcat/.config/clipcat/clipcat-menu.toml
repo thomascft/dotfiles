@@ -4,5 +4,5 @@ finder = 'rofi'
 
 [rofi]                    # options for "rofi"
 line_length = 100         # length of line
-menu_length = 30          # length of menu
+menu_length = 15          # length of menu
 
