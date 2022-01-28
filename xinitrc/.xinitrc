@@ -1,6 +1,6 @@
 pipewire &
 pipewire-pulse &
 wireplumber &
-lxsession &
+/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 picom &
 exec bspwm 

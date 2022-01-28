@@ -9,6 +9,10 @@ super + Return
 # program launcher
 super + @space
 	rofi -show run	
+super + c 
+	clipcat-menu
+super + semicolon
+	rofimoji
 
 XF86Audio{RaiseVolume,LowerVolume}
 	pamixer {-i,-d} 5

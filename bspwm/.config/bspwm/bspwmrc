@@ -20,4 +20,4 @@ bspc rule -a _NET_WM_STATE_STAYS_ON_TOP state=floating
 dunst &
 # playerctld daemon
 feh --bg-fill Pictures/wallpapers/urbanStreets.jpg
-xsetroot -cursor_name left_ptr 
+#xsetroot -cursor_name left_ptr 
