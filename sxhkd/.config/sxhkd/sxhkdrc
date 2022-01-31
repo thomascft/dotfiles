@@ -28,11 +28,10 @@ XF86Audio{Prev,Next}
 # Brightness control
 XF86MonBrightness{Up,Down}
 	brightnessctl set {+5%,5%-}
-Print
-	scrot ~/Pictures/screenshots/%b%d::%H%M%S.png
+Print	
+	maim ~/Pictures/screenshots/$(date +%s).png | xclip -selection clipboard -t $(date +%s).png
 ctrl + Print
-	scrot -s ~/Pictures/screenshots/%b%d::%H%M%S.png
-
+	maim -s ~/Pictures/screenshots/$(date +%s).png | xclip -selection clipboard -t $(date +%s).png
 super + x
 	alacritty --hold -e xprop  
 

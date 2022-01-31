@@ -1,6 +1,8 @@
+clipit &
 pipewire &
 pipewire-pulse &
 wireplumber &
-/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+/usr/lib/xfce-polkit/xfce-polkit &
 picom &
 exec bspwm 
+#exec awesome
