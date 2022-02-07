@@ -10,7 +10,7 @@ super + Return
 super + @space
 	rofi -show run	
 super + c 
-	clipcat-menu
+	deepin-picker
 super + semicolon
 	rofimoji
 

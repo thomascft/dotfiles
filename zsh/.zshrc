@@ -9,4 +9,4 @@ zgen load "MichaelAquilina/zsh-auto-notify"
 zgen load "Senderman/doas-zsh-plugin"
 zgen load zsh-users/zsh-autosuggestions
 
-
+(cat ~/.cache/wal/sequences &)
