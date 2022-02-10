@@ -11,10 +11,11 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Spotify manage=on desktop=^4 follow=off
 bspc rule -a _NET_WM_STATE_STAYS_ON_TOP state=floating
 
 #Start/Restart Polybar
 ~/.config/polybar/launch.sh 
+
+feh --bg-fill ~/Pictures/wallpapers/CatppuccinWaves.png
 
 dunst &
