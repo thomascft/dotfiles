@@ -7,4 +7,5 @@ picom &
 #wireplumber & 
 #pipewire-pulse &
 
-exec bspwm 
+exec bspwm
+

@@ -1,7 +1,5 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+eval "$(mcfly init zsh)"
+
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
 zgen load spaceship-prompt/spaceship-prompt spaceship
@@ -9,4 +7,8 @@ zgen load "MichaelAquilina/zsh-auto-notify"
 zgen load "Senderman/doas-zsh-plugin"
 zgen load zsh-users/zsh-autosuggestions
 
-(cat ~/.cache/wal/sequences &)
+
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /home/thomas/Projects/pomo/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/thomas/Projects/pomo/node_modules/tabtab/.completions/electron-forge.zsh

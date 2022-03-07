@@ -27,20 +27,20 @@
     mouse_right_click = close_all
 
 [urgency_low]
-    background = "#24283b"
-    foreground = "#a9b1d6"
-    frame_color = "#a9b1d6"
+    background = "#1E1E2E"
+    foreground = "#D9E0EE"
+    frame_color = "#D9E0EE"
     timeout = 10
 
 [urgency_normal]
-    background = "#24283b"
-    foreground = "#a9b1d6"
-    frame_color = "#a9b1d6"
+    background = "#1E1E2E"
+    foreground = "#D9E0EE"
+    frame_color = "#D9E0EE"
     timeout = 10
 
 [urgency_critical]
-    background = "#f7768e"
-    foreground = "#414868"
-    frame_color = "#414868"
+    background = "#F28FAD"
+    foreground = "#1E1E2E"
+    frame_color = "#1E1E2E"
     timeout = 0
     default_icon = /usr/share/icons/Paper/16x16/status/dialog-warning.png

@@ -25,6 +25,10 @@ XF86AudioPause
 XF86Audio{Prev,Next}
 	playerctl {previous,next}
 
+#Nyrna Toggle Suspend
+super + p 
+	nyrna --toggle
+
 # Brightness control
 XF86MonBrightness{Up,Down}
 	brightnessctl set {+5%,5%-}
