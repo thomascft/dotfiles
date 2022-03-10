@@ -1,0 +1,10 @@
+[[items]]
+file = "~/.config/alacritty/alacritty.yml"
+template = "alacritty"
+subtemplate = "default"
+
+[[items]]
+file = ".config/awesome/theme/schemes/base16.lua"
+template = "awesomewm"
+subtemplate = "default"
+rewrite = true
