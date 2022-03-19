@@ -49,6 +49,19 @@ ruled.client.connect_signal("request::rules", function()
         properties = { titlebars_enabled = true      }
     }
 
+    ruled.client.append_rule{
+        rule_any = {
+            name = {
+                "plank"
+            }
+        },
+        properties = {
+            floating = true,
+            sticky = true,
+            ontop = true
+        }
+    }
+
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- ruled.client.append_rule {
     --     rule       = { class = "Firefox"     },

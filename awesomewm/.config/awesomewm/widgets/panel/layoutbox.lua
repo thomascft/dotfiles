@@ -4,9 +4,9 @@ local gears = require("gears")
 local beautiful = require("beautiful")
 
 local layoutbox = function(s)
-   local content = wibox.container.margin{
-       widget = wibox.container.place {widget = awful.widget.layoutbox(s),},
-       margins = beautiful.padding
+   local content = wibox.widget{
+       widget = wibox.container.margin {widget = awful.widget.layoutbox(s),},
+       margins = 4
     }
    return content 
 end

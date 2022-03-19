@@ -1,4 +1,5 @@
-eval "$(mcfly init zsh)"
+autoload -U compinit; compinit
+
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
@@ -6,6 +7,7 @@ zgen load spaceship-prompt/spaceship-prompt spaceship
 zgen load "MichaelAquilina/zsh-auto-notify"
 zgen load "Senderman/doas-zsh-plugin"
 zgen load zsh-users/zsh-autosuggestions
+zgen load Aloxaf/fzf-tab
 
 
 

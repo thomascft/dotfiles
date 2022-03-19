@@ -5,7 +5,7 @@ local gears = require("gears")
 
 local tasklist = function(s)
 
-    return wibox.container.background {
+    return wibox.widget {
         left = 2,
         right = 2,
         widget = wibox.container.margin {

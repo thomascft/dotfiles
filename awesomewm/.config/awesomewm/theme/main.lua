@@ -45,6 +45,7 @@ theme.taglist_fg_occupied = colors.foreground
 theme.taglist_fg_focus   = colors.background
 
 theme.client_shape = gears.shape.rounded_rect
+theme.widget_shape = gears.shape.rounded_bar
 theme.padding = 12
 
 -- There are other variable sets

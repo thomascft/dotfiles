@@ -8,9 +8,9 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show run	
-super + c 
-	deepin-picker
+	rofi -show drun	
+super + b 
+	bwmenu
 super + semicolon
 	rofimoji
 

@@ -5,5 +5,6 @@ fi
 if [ -d "$HOME/.yarn/bin" ] ; then
 PATH="$HOME/.yarn/bin:$PATH"
 fi
+. "$HOME/.cargo/env"
 
 startx

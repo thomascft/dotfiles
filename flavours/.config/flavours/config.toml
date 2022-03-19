@@ -4,7 +4,25 @@ template = "alacritty"
 subtemplate = "default"
 
 [[items]]
-file = ".config/awesome/theme/schemes/base16.lua"
+file = "~/.config/awesome/theme/schemes/base16.lua"
 template = "awesomewm"
+subtemplate = "default"
+rewrite = true
+
+[[items]]
+file = "~/.config/rofi/colors-base16.rasi"
+template = "rofi"
+subtemplate = "variables"
+rewrite = true
+
+[[items]]
+file = "~/.config/polybar/config.ini"
+template = "polybar"
+subtemplate = "default"
+hook = "~/.config/polybar/launch.sh"
+
+[[items]]
+file = "~/.vscode-oss/extensions/vscode-base16/themes/Base16 Theme-color-theme.json"
+template = "vscode"
 subtemplate = "default"
 rewrite = true

@@ -1,26 +1,26 @@
--- Base16 Horizon Dark - awesomewm color variables
--- Michaël Ball (http://github.com/michael-ball/)
+-- Base16 Material - awesomewm color variables
+-- Nate Peterson
 
 local scheme = {}
 
-    scheme.background =  '#1C1E26'
-    scheme.foreground =  '#CBCED0'
-    scheme.black      =  '#1C1E26'
-    scheme.red        =  '#E93C58'
-    scheme.green      =  '#EFAF8E'
-    scheme.yellow     =  '#EFB993'
-    scheme.blue       =  '#DF5273'
-    scheme.magenta    =  '#B072D1'
-    scheme.cyan       =  '#24A8B4'
-    scheme.white      =  '#CBCED0'
-    scheme.br_black   =  '#6F6F70'
-    scheme.br_red     =  '#E58D7D'
-    scheme.br_green   =  '#232530'
-    scheme.br_yellow  =  '#2E303E'
-    scheme.br_blue    =  '#9DA0A2'
-    scheme.br_magenta =  '#DCDFE4'
-    scheme.br_cyan    =  '#E4A382'
-    scheme.br_white   =  '#E3E6EE'
+    scheme.background =  '#263238'
+    scheme.foreground =  '#EEFFFF'
+    scheme.black      =  '#263238'
+    scheme.red        =  '#F07178'
+    scheme.green      =  '#C3E88D'
+    scheme.yellow     =  '#FFCB6B'
+    scheme.blue       =  '#82AAFF'
+    scheme.magenta    =  '#C792EA'
+    scheme.cyan       =  '#89DDFF'
+    scheme.white      =  '#EEFFFF'
+    scheme.br_black   =  '#546E7A'
+    scheme.br_red     =  '#F78C6C'
+    scheme.br_green   =  '#2E3C43'
+    scheme.br_yellow  =  '#314549'
+    scheme.br_blue    =  '#B2CCD6'
+    scheme.br_magenta =  '#EEFFFF'
+    scheme.br_cyan    =  '#FF5370'
+    scheme.br_white   =  '#FFFFFF'
 
     return scheme
 
