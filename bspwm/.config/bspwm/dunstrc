@@ -1,0 +1,46 @@
+[global]
+    monitor = 0
+    corner_radius = 10
+    width = 320
+    height = 320
+    origin = top-right
+    offset = 26x82
+    padding = 10
+    horizontal_padding = 10
+    text_icon_padding = 0
+    frame_width = 1
+    frame_color = "#232323"
+    separator_color = frame
+    sort = yes
+    idle_threshold = 120
+    font = JetBrainsMono Nerd Font 12
+    markup = full
+    format = "<span foreground='#f3f4f5'><b>%s %p</b></span>\n%b"
+    alignment = left
+    vertical_alignment = center
+    stack_duplicates = true
+    show_indicators = yes
+    icon_position = left
+    max_icon_size = 32
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[urgency_low]
+    background = "#1E1E2E"
+    foreground = "#D9E0EE"
+    frame_color = "#D9E0EE"
+    timeout = 10
+
+[urgency_normal]
+    background = "#1E1E2E"
+    foreground = "#D9E0EE"
+    frame_color = "#D9E0EE"
+    timeout = 10
+
+[urgency_critical]
+    background = "#F28FAD"
+    foreground = "#1E1E2E"
+    frame_color = "#1E1E2E"
+    timeout = 0
+    default_icon = /usr/share/icons/Paper/16x16/status/dialog-warning.png

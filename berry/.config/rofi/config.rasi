@@ -1,0 +1,209 @@
+configuration{
+    modi: "drun,window";
+    disable-history: false;
+    sort: true;
+    font: "JetBrainsMono Nerd Font 14";
+    terminal: "alacritty";
+    sidebar-mode: 					true;
+    show-icons:true;
+    display-drun: " Apps:";
+    display-window: "  Windows:";
+    display-run: "   Run ";
+    location: 						8;
+    fixed-num-lines: 				true;
+    show-icons: 					true;
+    sidebar-mode: 					true;
+    scroll-method: 					1;
+    window-format: 					"[{w}] | {c} | {t}";
+    click-to-exit: 					true;
+    combi-hide-mode-prefix: 		false;
+}
+
+@theme "colors.rasi"
+
+* {
+    font:                           "JetBrains Mono Medium 10";
+    background-color:             	@bg;
+}
+
+window {
+    border: 						1px;
+    border-color: 					@blue;
+    border-radius: 					14px;
+    width: 							420px;
+    height: 						980;
+    x-offset:                       18;
+    y-offset:                       30;
+}
+
+prompt {
+    spacing: 						0;
+    border: 						0;
+    border-radius: 					100%;
+    background-color:             	@bg-alt;
+    text-color: 					@fg;
+    padding:    					6px 14px 6px 10px;
+}
+
+textbox-prompt-colon {
+    background-color:             	@blue;
+    expand: 						false;
+    str: 							"";
+    padding:    					6px 4px 6px 4px;
+    text-color: 					inherit;
+}
+
+entry {
+    spacing:    					0;
+    expand:                         true;
+    horizontal-align:               0;
+    background-color:             	@blue;
+    text-color: 					@bg;
+    placeholder-color:              @bg;
+    placeholder:                    "Search...";
+    padding:    					6px 2px 6px 2px;
+    border: 						0px 0px 0px 0px;
+    border-color: 					@blue;
+    border-radius: 					0px;
+}
+
+case-indicator {
+    spacing:    					0;
+    text-color: 					@fg;
+}
+
+inputbar {
+    background-color:             	@blue;
+    spacing:    					0px;
+    padding: 						2px;
+    text-color: 					@bg;
+    border: 						1px;
+    border-color: 					@blue;
+    border-radius: 					100%;
+    children: 						[ prompt,textbox-prompt-colon,entry ];
+}
+
+mainbox {
+    border: 						0px;
+    border-color: 					@blue;
+    spacing: 						10px;
+    padding: 						25px;
+}
+
+listview {
+    lines:							7;
+    columns:						1;
+    fixed-height: 					0;
+    border: 						0px;
+    border-color: 					@fg;
+    spacing: 						5px;
+    scrollbar: 						false;
+    padding: 						5px 0px 0px;
+}
+
+element-icon {
+    background-color: 				inherit;
+    text-color:       				inherit;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    size:                           24px;
+    border:                         0px;
+}
+
+element-text {
+    background-color: 				inherit;
+    text-color:       				inherit;
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0.5;
+    margin:                         2px 0px 2px 10px;
+}
+
+
+element {
+    border: 						0px;
+    padding: 						6px;
+}
+element normal.normal {
+    background-color: 				@bg;
+    text-color:       				@se;
+}
+element normal.urgent {
+    background-color: 				@bg;
+    text-color:       				@se;
+}
+element normal.active {
+    background-color: 				@bg;
+    text-color:       				@ac;
+}
+element selected.normal {
+    background-color: 				@ac;
+    text-color:       				@se;
+    border: 						0px;
+    border-radius: 					100%;
+    border-color: 					@blue;
+}
+element selected.urgent {
+    background-color: 				@bg;
+    text-color:       				@se;
+}
+element selected.active {
+    background-color: 				@bg;
+    text-color:       				@blue;
+}
+element alternate.normal {
+    background-color: 				@bg;
+    text-color:       				@se;
+}
+element alternate.urgent {
+    background-color: 				@bg;
+    text-color:       				@fg;
+}
+element alternate.active {
+    background-color: 				@bg;
+    text-color:       				@fg;
+}
+
+sidebar {
+    border:       					0px;
+    border-color: 					@blue;
+    border-radius: 					0px;
+}
+
+button {
+    margin: 						5px 10px 0px 10px;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    padding: 						10px;
+    background-color:             	@bg-alt;
+    text-color: 					@fg;
+    border: 						0px;
+    border-radius: 					100%;
+    border-color: 					@blue;
+}
+
+button selected {
+    background-color:             	@blue;
+    text-color: 					@bg;
+    border: 						0px;
+    border-radius: 					100%;
+    border-color: 					@blue;
+}
+
+scrollbar {
+    width:        					4px;
+    border:       					0px;
+    handle-color: 					@fg;
+    handle-width: 					8px;
+    padding:      					0;
+}
+
+message {
+    border: 						0px;
+    border-color: 					@blue;
+    padding: 						1px;
+}
+
+textbox {
+    text-color: 					@fg;
+}

@@ -1,21 +1,18 @@
 #! /bin/sh
-
-pgrep -x sxhkd > /dev/null || sxhkd &
+sxhkd -c ~/.config/bspwm/sxhkdrc &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
-bspc config border_width         0
+bspc config border_width         1
 bspc config window_gap          18
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a _NET_WM_STATE_STAYS_ON_TOP state=floating
-
 #Start/Restart Polybar
-~/.config/polybar/launch.sh 
+~/.config/bspwm/polybar.sh 
 
-feh --bg-fill ~/Pictures/wallpapers/CatppuccinWaves.png
+feh --bg-fill ~/Pictures/wallpapers/lakeSunset.jpg
 
-dunst &
+dunst -conf ~/.config/bspwm/dunstrc
