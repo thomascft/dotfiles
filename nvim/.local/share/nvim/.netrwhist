@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/thomas/Projects/pomo'
+let g:netrw_dirhist_6='/home/thomas/.dotfiles/bspwm/.config/bspwm'
+let g:netrw_dirhist_5='/home/thomas/.dotfiles/bspwm/.config'
+let g:netrw_dirhist_4='/home/thomas/.dotfiles/bspwm'
+let g:netrw_dirhist_3='/home/thomas/.dotfiles'
+let g:netrw_dirhist_2='/home/thomas/.config'
+let g:netrw_dirhist_1='/home/thomas/.config/nvim'
