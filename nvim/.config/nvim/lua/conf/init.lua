@@ -1,3 +1,3 @@
 --Configuration Init
-require("conf.bufferline")
-require('conf.nvim-tree')
+-- require("conf.bufferline")
+-- require('conf.nvim-tree')
