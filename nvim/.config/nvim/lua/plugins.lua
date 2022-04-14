@@ -27,6 +27,11 @@ return require('packer').startup(function()
 		'saadparwaiz1/cmp_luasnip' -- Luasnip Completion Source
 		}
 	}
+	
+	-- Themes!
+	use {"catppuccin/nvim", as = "catppuccin"}
+	use {'rose-pine/neovim', as = 'rose-pine',}
+	use 'kyazdani42/nvim-web-devicons'	
 
 	-- Snippets
 	use 'L3MON4D3/LuaSnip'	
@@ -38,15 +43,9 @@ return require('packer').startup(function()
 
 	--Utilities
 	use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{} end}	
-	use {'feline-nvim/feline.nvim', config = function() 
-		require("feline").setup({
-		components = require('catppuccin.core.integrations.feline'),
-		})
-
+	use {'feline-nvim/feline.nvim', config = function() require("feline").setup(
+		{components = require('catppuccin.core.integrations.feline'),})
 	end}
-
-	-- Themes!
-	use {"catppuccin/nvim", as = "catppuccin"}
-
-	
+	use 'akinsho/toggleterm.nvim' 
+	use 'elkowar/yuck.vim'	
 end)

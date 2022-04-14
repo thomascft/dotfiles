@@ -5,4 +5,5 @@ keymap("", "<Space>", "<Nop>", opts)
 
 vim.g.mapleader = " "
 
-keymap("n", "<leader>e", ":Lex 30 <cr>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle <cr>", opts)
+keymap("n", "<leader>/", ":ToggleTerm <cr>", opts)

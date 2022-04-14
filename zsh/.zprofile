@@ -7,4 +7,12 @@ PATH="$HOME/.yarn/bin:$PATH"
 fi
 . "$HOME/.cargo/env"
 
-startx
+
+read session'?Choose session:'
+
+if [[ $session = "" ]];then
+	echo 'Welcome the tty!'
+else
+	echo 'Opening: '$session
+	startx $session
+fi

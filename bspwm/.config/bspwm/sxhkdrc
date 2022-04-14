@@ -32,6 +32,8 @@ super + p
 super + l
 	dm-tool lock
 
+super + c
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # Brightness control
 XF86MonBrightness{Up,Down}

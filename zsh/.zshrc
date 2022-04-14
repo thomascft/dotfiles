@@ -1,5 +1,6 @@
 autoload -U compinit; compinit
 
+HISTFILE=~/.zsh_history
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
