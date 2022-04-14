@@ -27,14 +27,10 @@ XF86Audio{Prev,Next}
 
 #Nyrna Toggle Suspend
 super + p 
-	nyrna --toggle
+	pgrep picom && killall picom || picom --config ~/.config/bspwm/picom.conf
 #Lock Screen
 super + l
 	dm-tool lock
-
-super + c
-	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-
 # Brightness control
 XF86MonBrightness{Up,Down}
 	brightnessctl set {+5%,5%-}
