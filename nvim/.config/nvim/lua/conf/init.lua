@@ -1,3 +1,5 @@
 --Configuration Init
--- require("conf.bufferline")
--- require('conf.nvim-tree')
+require('conf.options')
+require('conf.theme')
+require('conf.bindings')
+require('conf.completion')

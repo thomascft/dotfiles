@@ -7,7 +7,7 @@ super + Return
 	alacritty
 
 # program launcher
-super + @space
+super + space
 	rofi -show drun	
 super + b 
 	bwmenu
@@ -17,7 +17,7 @@ super + semicolon
 XF86Audio{RaiseVolume,LowerVolume}
 	pamixer {-i,-d} 5
 XF86AudioMute
-	pamixer -m
+	pamixer -t
 XF86AudioPlay
 	playerctl play-pause
 XF86AudioPause
@@ -28,6 +28,10 @@ XF86Audio{Prev,Next}
 #Nyrna Toggle Suspend
 super + p 
 	nyrna --toggle
+#Lock Screen
+super + l
+	dm-tool lock
+
 
 # Brightness control
 XF86MonBrightness{Up,Down}

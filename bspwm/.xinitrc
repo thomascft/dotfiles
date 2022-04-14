@@ -1,5 +1,3 @@
-clipit &
-xsetroot -cursor_name left_ptr &
 /usr/lib/xfce-polkit/xfce-polkit &
-picom --config ~/.config/bspwm/picom.conf &
-exec bspwm
+setxkbmap -model pc105 -layout us,us -variant ,colemak -option grp:ctrls_toggle,shift:both_capslock,caps:backspace
+exec $2
