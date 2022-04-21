@@ -1,2 +1,2 @@
 vim.opt.termguicolors = true
-vim.cmd[[colorscheme rose-pine]] 
+vim.cmd[[colorscheme tokyodark]] 
