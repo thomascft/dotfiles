@@ -22,12 +22,20 @@ return require('packer').startup(function()
 	use 'folke/tokyonight.nvim'
 	use 'kyazdani42/nvim-web-devicons'	
 
-	-- Ui 
-	use {'kyazdani42/nvim-tree.lua', config = function() require('nvim-tree').setup() end}
+	-- Ui
+	use 'glepnir/dashboard-nvim'
+	use 'kyazdani42/nvim-tree.lua'
+	use {"ahmedkhalf/project.nvim", config = function() require("project_nvim").setup{show_hidden = true,} require('telescope').load_extension('projects') end}
+	use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }
+}
+
+	--Syntax
+	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
 	--Utilities
 	use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{} end}	
 	use 'akinsho/toggleterm.nvim'
 	use {"folke/zen-mode.nvim", config = function() require("zen-mode").setup () end}
 	use 'folke/twilight.nvim'
+	use {'lewis6991/gitsigns.nvim', config = function() require('gitsigns').setup() end}
 end)
