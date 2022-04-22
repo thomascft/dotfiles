@@ -2,5 +2,3 @@
 require('conf.options')
 require('conf.theme')
 require('conf.bindings')
-require('conf.completion')
-require('conf.ui')

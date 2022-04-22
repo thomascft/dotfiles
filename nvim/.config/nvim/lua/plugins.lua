@@ -18,35 +18,16 @@ end
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim' -- Have packer update itself
 
-	-- Auto-Complete
-	use {'hrsh7th/nvim-cmp', requires = {
-	--	'hrsh7th/cmp-nvim-lsp', 
-		'hrsh7th/cmp-buffer', 
-		'hrsh7th/cmp-path', 
-		'hrsh7th/cmp-cmdline',
-		'saadparwaiz1/cmp_luasnip' -- Luasnip Completion Source
-		}
-	}
-	
 	-- Themes!
-	use {"catppuccin/nvim", as = "catppuccin"}
-	use 'tiagovla/tokyodark.nvim'
-	use 'navarasu/onedark.nvim'
-	use {'marko-cerovac/material.nvim'}
-	use {'rose-pine/neovim', as = 'rose-pine',}
+	use 'folke/tokyonight.nvim'
 	use 'kyazdani42/nvim-web-devicons'	
 
-	-- Snippets
-	use 'L3MON4D3/LuaSnip'	
-	use 'rafamadriz/friendly-snippets'
-
 	-- Ui 
-	use 'akinsho/bufferline.nvim'
-	use 'kyazdani42/nvim-tree.lua'
+	use {'kyazdani42/nvim-tree.lua', config = function() require('nvim-tree').setup() end}
 
 	--Utilities
 	use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{} end}	
-	use {'feline-nvim/feline.nvim', config = function() require("feline").setup() end}
-	use 'akinsho/toggleterm.nvim' 
-	use 'elkowar/yuck.vim'	
+	use 'akinsho/toggleterm.nvim'
+	use {"folke/zen-mode.nvim", config = function() require("zen-mode").setup () end}
+	use 'folke/twilight.nvim'
 end)
