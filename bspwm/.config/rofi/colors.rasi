@@ -1,9 +1,8 @@
 * {
-  al:      #00000000;
-  bg:      #191724;
-  se:      #a9b1d6;
+  bg:      #16161e;
+  se:      #414868;
   fg:      #a9b1d6;
-  ac:      #414868;
+  ac:      #7aa2f7;
   red:     #f7768e;
   green:   #73daca;
   yellow:  #e0af68;

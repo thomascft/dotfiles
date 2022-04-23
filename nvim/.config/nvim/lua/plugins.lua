@@ -12,7 +12,27 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   print "Installing packer close and reopen Neovim..."
   vim.cmd [[packadd packer.nvim]]
 end
+-- Auto-Reload nvim plugins.lua
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]]
 
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
+
+-- Have packer use a popup window
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
 
 -- Install Plugins
 return require('packer').startup(function()
@@ -23,7 +43,6 @@ return require('packer').startup(function()
 	use 'kyazdani42/nvim-web-devicons'	
 
 	-- Ui
-	use 'glepnir/dashboard-nvim'
 	use 'kyazdani42/nvim-tree.lua'
 	use {"ahmedkhalf/project.nvim", config = function() require("project_nvim").setup{show_hidden = true,} require('telescope').load_extension('projects') end}
 	use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }

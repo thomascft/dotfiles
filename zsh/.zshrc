@@ -1,17 +1,17 @@
-autoload -U compinit; compinit
-
+HISTSIZE=1000
+SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-# load zgen
-source "${HOME}/.zgen/zgen.zsh"
+source "${HOME}/.zgen/zgen.zsh" || git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+
+autoload -U compinit; compinit
+eval "$(mcfly init zsh)"
+
 zgen load spaceship-prompt/spaceship-prompt spaceship
-zgen load "MichaelAquilina/zsh-auto-notify"
 zgen load "Senderman/doas-zsh-plugin"
-zgen load zsh-users/zsh-autosuggestions
-zgen load Aloxaf/fzf-tab
 
-
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /home/thomas/Projects/pomo/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/thomas/Projects/pomo/node_modules/tabtab/.completions/electron-forge.zsh
+zgen load unixorn/fzf-zsh-plugin
+zgen load zsh-users/zsh-completions
+zgen load zsh-users/zsh-history-substring-search
+#This needs to be the last thing sourced.
+zgen load zsh-users/zsh-syntax-highlighting
