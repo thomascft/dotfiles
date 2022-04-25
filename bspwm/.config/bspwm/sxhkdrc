@@ -12,7 +12,7 @@ super + space
 super + b 
 	bwmenu
 super + semicolon
-	rofimoji
+	rofimoji -f nerd_font 
 
 XF86Audio{RaiseVolume,LowerVolume}
 	pamixer {-i,-d} 5
@@ -25,7 +25,6 @@ XF86AudioPause
 XF86Audio{Prev,Next}
 	playerctl {previous,next}
 
-#Nyrna Toggle Suspend
 super + p 
 	pgrep picom && killall picom || picom --config ~/.config/bspwm/picom.conf
 #Lock Screen
@@ -39,7 +38,7 @@ Print
 ctrl + Print
 	maim -s ~/Pictures/screenshots/$(date +%s).png | xclip -selection clipboard -t $(date +%s).png
 super + x
-	alacritty --hold -e xprop  
+	$TERM --hold -e xprop  
 
 # make sxhkd reload its configuration files:
 super + Escape
