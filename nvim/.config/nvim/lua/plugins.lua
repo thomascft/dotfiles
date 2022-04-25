@@ -52,7 +52,8 @@ return require('packer').startup(function()
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
 	--Utilities
-	use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{} end}	
+	use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{} end}
+	use 'windwp/nvim-ts-autotag'
 	use 'akinsho/toggleterm.nvim'
 	use {"folke/zen-mode.nvim", config = function() require("zen-mode").setup () end}
 	use 'folke/twilight.nvim'

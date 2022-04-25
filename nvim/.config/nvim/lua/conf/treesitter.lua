@@ -1,14 +1,16 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "javascript", "lua", "rust" },
+    ensure_installed = { "lua", "rust", "html", "css", "javascript" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+    sync_install = false,
 
-  highlight = {
+    highlight = {
     -- `false` will disable the whole extension
-    enable = true,
-
-
+	enable = true,
    -- additional_vim_regex_highlighting = false,
-  },
+    },
+
+    autotag = {
+	enable = true,
+    }
 }
