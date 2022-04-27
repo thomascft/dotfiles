@@ -15,3 +15,5 @@ zgen load zsh-users/zsh-completions
 zgen load zsh-users/zsh-history-substring-search
 #This needs to be the last thing sourced.
 zgen load zsh-users/zsh-syntax-highlighting
+
+eval "$(rbenv init - zsh)"
