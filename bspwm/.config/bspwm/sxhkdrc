@@ -9,6 +9,9 @@ super + Return
 # program launcher
 super + space
 	rofi -show drun	
+alt + Tab
+    rofi -show window	
+
 super + b 
 	bwmenu
 super + semicolon
