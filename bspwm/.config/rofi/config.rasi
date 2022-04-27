@@ -1,18 +1,47 @@
-configuration{
-    modi: "drun,window,run";
-    lines: 5;
-    disable-history: false;
-    sort: true;
+configuration {
+    modi: [drun, window, run];
     font: "VictorMono Nerd Font 18";
-    terminal: "alacritty";
-    show-icons:true;
-    
-
-    display-drun: " Apps:";
-    display-window: "  Windows:";
+    terminal: "kitty";
 }
-@import "colors.rasi"
 
+@theme "colors.rasi"
 * {
-background-color: @bg;
+    ac: @blue;
+    text-color: @fg;
+    background-color: @bg;
+}
+window {
+    border-radius: 16px;
+    border: 4px;
+    border-color: @ac;
+    padding: 16px;
+}
+inputbar {
+    padding: 16px;
+    children: [entry];
+}
+entry {
+    placeholder: " Type to Search";
+}
+listview {
+    columns: 2;
+    lines: 10;
+}
+element {
+    padding:            12px 12px;
+    children: [ element-icon, element-text ];
+    spacing:            16px;
+}
+element selected.normal {
+    background-color: @ac; 
+    text-color: @bg;
+    border-radius: 16px;
+}
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+element-icon {
+    background-color: inherit;
+    size: 24px;
 }
