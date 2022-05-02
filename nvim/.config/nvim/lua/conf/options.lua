@@ -17,5 +17,5 @@ vim.opt.scrolloff = 8
 
 vim.opt.iskeyword:append('-')
 
-vim.opt.foldmethod='expr'
-vim.opt.foldexpr='nvim_treesitter#foldexpr()'
+-- vim.opt.foldmethod='expr'
+-- vim.opt.foldexpr='nvim_treesitter#foldexpr()'

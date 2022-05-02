@@ -51,6 +51,16 @@ return require('packer').startup(function()
 	--Syntax
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+
+	use 'L3MON4D3/LuaSnip'
+	use 'rafamadriz/friendly-snippets'
+	use 'saadparwaiz1/cmp_luasnip'
+
 	--Utilities
 	use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{} end}
 	use 'windwp/nvim-ts-autotag'
