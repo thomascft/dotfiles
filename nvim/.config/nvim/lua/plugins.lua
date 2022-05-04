@@ -38,12 +38,20 @@ packer.init {
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim' -- Have packer update itself
 
+	--Impatient for Startup Speed
+	use 'lewis6991/impatient.nvim'
+
 	-- Themes!
 	use 'folke/tokyonight.nvim'
-	use 'kyazdani42/nvim-web-devicons'	
+	use 'kyazdani42/nvim-web-devicons'
 
 	-- Ui
 	use 'kyazdani42/nvim-tree.lua'
+        use 'akinsho/bufferline.nvim'
+	use 'folke/which-key.nvim'
+        use 'folke/persistence.nvim'
+	use 'feline-nvim/feline.nvim'
+	use 'goolord/alpha-nvim'
 	use {"ahmedkhalf/project.nvim", config = function() require("project_nvim").setup{show_hidden = true,} require('telescope').load_extension('projects') end}
 	use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }
 }
@@ -51,6 +59,11 @@ return require('packer').startup(function()
 	--Syntax
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
+	--Lsp
+	use 'williamboman/nvim-lsp-installer'
+	use 'neovim/nvim-lspconfig'
+
+	--Auto-Complete
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-path'
@@ -62,6 +75,7 @@ return require('packer').startup(function()
 	use 'saadparwaiz1/cmp_luasnip'
 
 	--Utilities
+	use {'norcalli/nvim-colorizer.lua', config = function() require('colorizer').setup {} end}
 	use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{} end}
 	use 'windwp/nvim-ts-autotag'
 	use 'akinsho/toggleterm.nvim'

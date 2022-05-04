@@ -1,3 +1,0 @@
-require('dashboard-nvim').setup {
-
-}

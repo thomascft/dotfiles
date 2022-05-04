@@ -7,3 +7,7 @@ vim.g.mapleader = " "
 
 keymap("n", "<leader>e", ":NvimTreeToggle <cr>", opts)
 keymap("n", "<leader>/", ":ToggleTerm <cr>", opts)
+
+--Sessions
+keymap("n", "<leader>sl", [[<cmd>lua require("persistence").load({ last = true })<cr>]], opts)
+keymap("n", "<leader>sp", ":Telescope projects <cr>", opts)
