@@ -4,14 +4,14 @@ pgrep sxhkd || sxhkd -c ~/.config/bspwm/sxhkdrc &
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 bspc config border_width         0
-bspc config window_gap          20
+bspc config window_gap          10
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 #Borders
-bspc config border_width 5px
+bspc config border_width 2px
 
 bspc config normal_border_color "#28344a"
 bspc config focused_border_color "#7aa2f7"

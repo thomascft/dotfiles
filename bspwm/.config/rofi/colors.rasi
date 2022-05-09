@@ -1,11 +1,26 @@
+
+//* {
+//  bg:      #1a1b26;
+//  se:      #414868;
+//  fg:      #a9b1d6;
+//  red:     #f7768e;
+//  green:   #73daca;
+//  yellow:  #e0af68;
+//  blue:    #7aa2f7;
+//  purple:  #bb9af7;
+//  cyan:    #7dcfff;
+//}
+
 * {
-  bg:      #1a1b26;
-  se:      #414868;
-  fg:      #a9b1d6;
-  red:     #f7768e;
-  green:   #73daca;
-  yellow:  #e0af68;
-  blue:    #7aa2f7;
-  purple:  #bb9af7;
-  cyan:    #7dcfff;
+    bg:		#d5d6db;
+    alt:	#9699a3;
+    fg:		#343b58;
+    alt: 	#565a6e;
+    red:	#8c4351;
+    yellow:	#8f5e15;
+    green:	#33635c;
+    blue:	#34548a;
+    magenta:	#5a4a78;
+    black:	#0f0f14;
+    white: 	#343b58;
 }
