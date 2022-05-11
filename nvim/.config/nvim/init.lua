@@ -3,5 +3,5 @@
 require('impatient').enable_profile()
 require('plugins')
 require('conf')
-vim.opt.guifont='VictorMono Nerd Font'
+vim.opt.guifont='VictorMono Nerd Font:h12'
 

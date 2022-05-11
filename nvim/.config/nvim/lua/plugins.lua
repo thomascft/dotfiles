@@ -77,6 +77,7 @@ return require('packer').startup(function()
 	--Utilities
 	use {'norcalli/nvim-colorizer.lua', config = function() require('colorizer').setup {} end}
 	use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{} end}
+	use {'terrortylor/nvim-comment', config = function() require('nvim_comment').setup {} end}
 	use 'windwp/nvim-ts-autotag'
 	use 'akinsho/toggleterm.nvim'
 	use {"folke/zen-mode.nvim", config = function() require("zen-mode").setup () end}

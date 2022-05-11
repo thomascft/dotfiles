@@ -1,6 +1,5 @@
 local lspconfig = require("lspconfig")
 local lsp_installer = require("nvim-lsp-installer")
-local null_ls = require('null_ls')
 
 local servers = { "sumneko_lua", "rust_analyzer", "eslint", "pyright"}
 
