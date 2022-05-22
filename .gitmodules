@@ -1,0 +1,12 @@
+[submodule "bling"]
+	path = awesome/.config/awesome/modules/bling
+	url = https://github.com/BlingCorp/bling.git
+[submodule "lain"]
+	path = awesome/.config/awesome/modules/lain
+	url = https://github.com/lcpz/lain.git
+[submodule "rubato"]
+	path = awesome/.config/awesome/modules/rubato
+	url = https://github.com/andOrlando/rubato
+[submodule "vicious"]
+	path = awesome/.config/awesome/modules/vicious
+	url = https://github.com/vicious-widgets/vicious
