@@ -1,7 +1,6 @@
 return {
     font	= 	"Inter",
-    gap 	= 	10,
+    gap 	= 	5,
     border 	= 	0,
-    corners 	= 	15,
     scheme 	= 	"dark",
 }

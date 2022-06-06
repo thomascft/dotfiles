@@ -1,5 +1,7 @@
 local awful = require("awful")
 local wibox = require("wibox")
+local gears = require("gears")
+local beautiful = require("beautiful")
 
 client.connect_signal("request::titlebars", function(c)
     -- buttons for the titlebar

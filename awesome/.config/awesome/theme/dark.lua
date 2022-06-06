@@ -1,7 +1,7 @@
 ---------------------------
 -- Default awesome theme --
 ---------------------------
-
+local bling = require("modules.bling")
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local rnotification = require("ruled.notification")
@@ -10,22 +10,69 @@ local dpi = xresources.apply_dpi
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 
+local vars  = require("theme.vars")
+
+bling.module.flash_focus.enable()
+
+local colorscheme = {
+    -- bg_dark = "#1f2335",
+    bg_dark = "#16161e",
+    -- bg = "#24283b",
+    bg = "#1a1b26",
+    bg_highlight = "#292e42",
+    black = "#414868",
+    fg = "#c0caf5",
+    fg_dark = "#a9b1d6",
+    fg_gutter = "#3b4261",
+    dark3 = "#545c7e",
+    comment = "#565f89",
+    dark5 = "#737aa2",
+    blue0 = "#3d59a1",
+    blue = "#7aa2f7",
+    cyan = "#7dcfff",
+    blue1 = "#2ac3de",
+    blue2 = "#0db9d7",
+    blue5 = "#89ddff",
+    blue6 = "#B4F9F8",
+    blue7 = "#394b70",
+    magenta = "#bb9af7",
+    magenta2 = "#ff007c",
+    purple = "#9d7cd8",
+    orange = "#ff9e64",
+    yellow = "#e0af68",
+    green = "#9ece6a",
+    green1 = "#73daca",
+    green2 = "#41a6b5",
+    teal = "#1abc9c",
+    red = "#f7768e",
+    red1 = "#db4b4b"
+}
+
+
+
 local theme = {}
 
-theme.font          = "Inter 8"
+theme.vars = vars
 
-theme.bg_normal     = "#1a1b26"
-theme.bg_focus      = "#535d6c"
+theme.colorscheme = colorscheme
+
+theme.colorscheme.accent = theme.colorscheme.blue
+
+
+theme.font          = "Inter 12"
+
+theme.bg_normal     = theme.colorscheme.bg
+theme.bg_focus      = theme.colorscheme.bg_highlight
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal     = theme.colorscheme.fg
+theme.fg_focus      = theme.colorscheme.fg
+theme.fg_urgent     = theme.colorscheme.fg
+theme.fg_minimize   = theme.colorscheme.fg
 
-theme.useless_gap         = dpi(0)
+theme.useless_gap         = vars.gap
 theme.border_width        = dpi(1)
 theme.border_color_normal = "#000000"
 theme.border_color_active = "#535d6c"
@@ -44,13 +91,6 @@ theme.border_color_marked = "#91231c"
 --theme.taglist_bg_focus = "#ff0000"
 
 -- Generate taglist squares:
-local taglist_square_size = dpi(4)
-theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
-    taglist_square_size, theme.fg_normal
-)
-theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
-    taglist_square_size, theme.fg_normal
-)
 
 -- Variables set for theming notifications:
 -- notification_font

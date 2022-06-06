@@ -10,3 +10,6 @@
 [submodule "vicious"]
 	path = awesome/.config/awesome/modules/vicious
 	url = https://github.com/vicious-widgets/vicious
+[submodule "awesome/.config/awesome/modules/vicious"]
+	path = awesome/.config/awesome/modules/vicious
+	url = https://github.com/vicious-widgets/vicious
