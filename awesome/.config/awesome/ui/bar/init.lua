@@ -3,6 +3,7 @@ local wibox = require('wibox')
 local beautiful = require("beautiful")
 local taglist = require("ui.bar.taglist")
 local tasklist = require("ui.bar.tasklist")
+local battery = require("ui.bar.battery")
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
