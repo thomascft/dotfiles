@@ -1,0 +1,3 @@
+[submodule "bling"]
+	path = awesome/.config/awesome/modules/bling
+	url = https://github.com/blingcorp/bling

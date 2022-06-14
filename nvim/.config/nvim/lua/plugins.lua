@@ -26,8 +26,12 @@ if not status_ok then
 end
 
 return require("packer").startup(function()
+    --Common Libraries
+    use "nvim-lua/plenary.nvim"
 
     -- Core Plugins
-    use{'kyazdani42/nvim-tree.lua', config = function() require("nvim-tree").setup() end}
-
+    use "kyazdani42/nvim-tree.lua"
+    use "folke/which-key.nvim"
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use "nvim-telescope/telescope.nvim"
 end)

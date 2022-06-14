@@ -1,1 +1,2 @@
-require("user.plugins")
+require("plugins")
+require("user")
