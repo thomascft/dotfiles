@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export save_file="$(date +%m-%d-%y_%H-%M-%S).png"
+export save_location="$HOME/Pictures/screenshots/$save_file"
+wayshot -f "$save_location"
+wl-copy < "$save_location"
+notify-send -i "$save_location" "Screenshot $save_file"
+
+
