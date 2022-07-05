@@ -40,6 +40,9 @@
 		"num-tags" : 10,
 		"tag-labels" : ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"]
 	},
+	"river/window" : {
+		"max-length" : 50,
+	},
 	"custom/tray-label" : {
 		"format" : ""
 	},
