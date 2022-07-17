@@ -16,6 +16,18 @@ window#waybar {
 	color: #192227;
 }
 
+.left {
+	padding: 0 4px;
+	border-radius: 10px 0 0 10px;
+	margin-left: 4px;
+}
+
+.right {
+	border-radius: 0 10px 10px 0;
+	margin-right: 4px;
+	padding: 0 4px;
+}
+
 #custom-arch {
 	padding: 0 8px;
 	border-radius: 25%;
@@ -24,22 +36,6 @@ window#waybar {
 	margin-right: 4px;
 }
 
-#custom-song-previous {
-	background-color: #B480D6;
-	padding: 0 6px;
-	border-radius: 10px 0 0 10px;
-	margin-left: 4px;
-}
-#custom-song-playpause {
-	background-color: #C792EA;
-	padding: 0 8px;
-}
-#custom-song-next {
-	background-color: #B480D6;
-	border-radius: 0 10px 10px 0;
-	margin-right: 4px;
-	padding: 0 6px;
-}
 #tags button {
 	color: #546E7A;
 	border-radius: 25%;
@@ -56,57 +52,33 @@ window#waybar {
 #custom-tray-label {
 	padding: 0 10px;
 	border-radius: 10px;
-	background-color: #B0BEC5;
+	color: #B0BEC5;
 }
 #tray {
 	margin-right: 4px;
 	padding: 0 4px;
 }
 
-#pulseaudio.icon {
-	background-color: #DC6068;
-	padding: 0 4px;
-	border-radius: 10px 0 0 10px;
-	margin-left: 4px;
+#pulseaudio.left {
+	color: #DC6068;
 }
-#pulseaudio.volume {
-	background-color: #F07178;
-	border-radius: 0 10px 10px 0;
-	margin-right: 4px;
-	padding: 0 4px;
+#pulseaudio.right {
+	color: #F07178;
 }
-#backlight.icon {
-	background-color: #E6B455;
-	padding: 0 4px;
-	border-radius: 10px 0 0 10px;
-	margin-left: 4px;
+#backlight.left {
+	color: #E6B455;
 }
-#backlight.level {
-	background-color: #FFCB6B;
-	border-radius: 0 10px 10px 0;
-	margin-right: 4px;
-	padding: 0 4px;
+#backlight.right {
+	color: #FFCB6B;
 }
-#battery.icon {
-	background-color: #ABCF76;
-	padding: 0 4px;
-	border-radius: 10px 0 0 10px;
-	margin-left: 4px;
+#battery.left {
+	color: #ABCF76;
 }
-#battery.percent {
-	background-color: #C3E88D;
-	border-radius: 0 10px 10px 0;
-	margin-right: 4px;
-	padding: 0 2px;
-}
-#custom-clock-icon {
-	background-color: #6E98EB;
-	padding: 0 4px;
-	margin-left: 4px;
-	border-radius: 10px 0 0 10px;
+#battery.right {
+	color: #C3E88D;
 }
 #clock {
-	background-color: #82AAFF;
+	border-radius: 10px;
 	padding: 0 4px;
-	border-radius: 0 10px 10px 0;
+	background-color: #82AAFF;
 }

@@ -5,19 +5,19 @@
 	"margin-left" : 10,
 	"margin-right" : 10,
 	"margin-top" : 10,
-	"modules-left" : ["custom/arch",  "river/tags", "river/mode"],
+	"modules-left" : ["custom/arch", "custom/song-previous", "custom/song-playpause", "custom/song-next", "river/tags", "river/mode"],
 	"modules-center" : ["river/window"],
-	"modules-right" : ["custom/tray-label", "tray", "pulseaudio#left", "pulseaudio#right", "backlight#left", "backlight#right", "battery#left","battery#right","clock"],
+	"modules-right" : ["custom/tray-label", "tray", "pulseaudio#icon", "pulseaudio#volume", "backlight#icon", "backlight#level", "battery#icon","battery#percent", "custom/clock-icon","clock"],
 	"custom/arch" : {
 		"format" : ""
 	},
 
-	"custom/previous#music" : {
+	"custom/song-previous" : {
 		"format" : "ﭢ",
 		"on-click" : "playerctl previous",
 		"tooltip" : false
 	},
-	"custom/playpause#music" : {
+	"custom/song-playpause" : {
 		"format" : "{icon}",
 		"return-type" : "json",
 		"format-icons" : {
@@ -28,7 +28,7 @@
 		"on-click" : "playerctl play-pause",
 		"tooltip" : false
 	},
-	"custom/next#music" : {
+	"custom/song-next" : {
 		"format" : "ﭠ",
 		"on-click" : "playerctl next",
 		"tooltip" : false
@@ -46,7 +46,7 @@
 	"custom/tray-label" : {
 		"format" : ""
 	},
-	"pulseaudio#left" : {
+	"pulseaudio#icon" : {
 		"format" : "{icon}",
 		"format-muted" : "ﱝ",
 		"format-icons" : {
@@ -56,21 +56,24 @@
         	"default": ["", ""]
 		}
 	},
-	"backlight#left" : {
+	"backlight#icon" : {
 		"format" : "{icon}",
 		"format-icons" : ["", "", "", "", "", "", ""]
 	},
-	"backlight#right" : {
+	"backlight#level" : {
 		"format" : "{percent}%" 
 	},
-	"battery#left" : {
+	"battery#icon" : {
         "format-icons" : ["", "", "", "", ""],
 		"format" : "{icon}",
 	},
-	"battery#right" : {
+	"battery#percent" : {
         "format" : "{capacity}%",
     },
-	    "clock": {
+	"custom/clock-icon" : {
+		"format" : "",
+	},
+    "clock": {
         "format": "{:%b %d %H:%M}"
     }
 }

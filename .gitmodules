@@ -1,3 +1,8 @@
 [submodule "Spicetify-Marketplace"]
-	path = spotify/.config/spicetify/CustomApps/marketplace/
+	path = spotify/.config/spicetify/CustomApps/marketplace
 	url = https://github.com/spicetify/spicetify-marketplace
+	branch = dist
+[submodule "spicetify-combi-playlists"]
+	path = spotify/.config/spicetify/CustomApps/combined-playlists
+	url = https://github.com/jeroentvb/spicetify-combined-playlists/
+	branch = dist
