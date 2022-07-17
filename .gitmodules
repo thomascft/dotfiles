@@ -1,15 +1,8 @@
-[submodule "bling"]
-	path = awesome/.config/awesome/modules/bling
-	url = https://github.com/BlingCorp/bling.git
-[submodule "lain"]
-	path = awesome/.config/awesome/modules/lain
-	url = https://github.com/lcpz/lain.git
-[submodule "rubato"]
-	path = awesome/.config/awesome/modules/rubato
-	url = https://github.com/andOrlando/rubato
-[submodule "vicious"]
-	path = awesome/.config/awesome/modules/vicious
-	url = https://github.com/vicious-widgets/vicious
-[submodule "awesome/.config/awesome/modules/vicious"]
-	path = awesome/.config/awesome/modules/vicious
-	url = https://github.com/vicious-widgets/vicious
+[submodule "Spicetify-Marketplace"]
+	path = spotify/.config/spicetify/CustomApps/marketplace
+	url = https://github.com/spicetify/spicetify-marketplace
+	branch = dist
+[submodule "spicetify-combi-playlists"]
+	path = spotify/.config/spicetify/CustomApps/combined-playlists
+	url = https://github.com/jeroentvb/spicetify-combined-playlists/
+	branch = dist

@@ -1,0 +1,17 @@
+(defwindow tutorial
+	:monitor 0 
+	:geometry (geometry
+		:x "0%"
+		:y "20px"
+		:width "90%"
+		:height "30px"
+		:anchor "top center")
+	:stacking "fg"
+	(widg1 
+		:text "Widget"))
+
+(defwidget widg1 [?text]
+	(box 
+		:orientation "horizontal"
+		:halign "center"
+		text))

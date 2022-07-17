@@ -1,0 +1,12 @@
+# lychee
+[colors]
+foreground = "#f2c2c2"
+background = "#0d0005"
+cursor_bg = "#f2c2c2"
+cursor_border = "#f2c2c2"
+cursor_fg = "#0d0005"
+selection_bg = "#0d0005"
+selection_fg = "#f2c2c2"
+
+ansi = ["#4d4d4d","#e65252","#e6975b","#e6cf74","#99d486","#6ce6cb","#79a8e6","#9765ad"]
+brights = ["#808080","#e68080","#e6b189","#e6d8a2","#acc79e","#8bc6b9","#93acce","#9887a0"]

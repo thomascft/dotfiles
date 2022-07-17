@@ -1,17 +1,13 @@
-# Presenting...
+# Thomas Croft's Dotfiles
 
-### My Dotfiles!
-They're not too got and a bit buggy, but I'm proud of them. I've been daily driving linux for about 6 months. Soo... let's get back on point.
-    Here's what you need to install:
-    
-        - Bspwm
-        - Polybar
-        - Dunst
-        - Zsh
-        - Picom
-        - rofi
-	- Stow
-I'm kinda new to this, but have fun with them.
+### Welcome to my dotfiles repo,
 
-### Install
-To install them clone these into your home directory and use `Stow` to link the folders you want.
+It's not super organized, but feel free to take a look. I've been daily driving these for just over a year now.
+
+## Featured
+- [Artix Linux](https://artixlinux.org)
+- [AwesomeWM-Git](https://github.com/awesomeWM/awesome)
+- [WezTerm](https://github.com/wez/wezterm)
+- [Xplr](https://github.com/sayanarijit/xplr)
+- [NeoVim](https://neovim.io) + [Neovide](https://github.com/neovide/neovide)
+- [NuShell](https://github.com/nushell/nushell)

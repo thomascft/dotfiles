@@ -1,0 +1,5 @@
+sort=-time
+default-timeout=5000
+background-color=#263238
+border-color=#37444C
+font=JetBrains Mono
