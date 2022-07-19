@@ -1,15 +1,13 @@
 {
 	"layer" : "top",
-	"position" : "top", 
+	"position" : "left", 
 	"mode" : "dock",
-	"margin-left" : 10,
-	"margin-right" : 10,
-	"margin-top" : 10,
-	"modules-left" : ["custom/arch",  "river/tags", "river/mode"],
-	"modules-center" : ["river/window"],
-	"modules-right" : ["custom/tray-label", "tray", "pulseaudio#left", "pulseaudio#right", "backlight#left", "backlight#right", "battery#left","battery#right","clock"],
+	"modules-left" : ["custom/arch",  "river/tags",],
+	"modules-center" : [],
+	"modules-right" : ["pulseaudio", "backlight", "battery", "clock#hour", "clock#min"],
 	"custom/arch" : {
-		"format" : ""
+		"format" : "",
+		"on-click" : "eww windows | grep -i *dashboard && eww close dashboard || eww open dashboard"
 	},
 
 	"custom/previous#music" : {
@@ -39,14 +37,9 @@
 	"river/tags" : {
 		"num-tags" : 10,
 		"tag-labels" : ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"]
-	},
-	"river/window" : {
-		"max-length" : 50,
-	},
-	"custom/tray-label" : {
-		"format" : ""
-	},
-	"pulseaudio#left" : {
+		},
+	"pulseaudio" : {
+		"on-click" : "eww windows | grep -i *sliders && eww close sliders || eww open sliders",
 		"format" : "{icon}",
 		"format-muted" : "ﱝ",
 		"format-icons" : {
@@ -56,21 +49,22 @@
         	"default": ["", ""]
 		}
 	},
-	"backlight#left" : {
+	"backlight" : {
+		"on-click" : "eww windows | grep -i *sliders && eww close sliders || eww open sliders",
 		"format" : "{icon}",
 		"format-icons" : ["", "", "", "", "", "", ""]
 	},
-	"backlight#right" : {
-		"format" : "{percent}%" 
-	},
-	"battery#left" : {
+	"battery" : {
+		"on-click" : "eww windows | grep -i *sliders && eww close sliders || eww open sliders",
         "format-icons" : ["", "", "", "", ""],
 		"format" : "{icon}",
 	},
-	"battery#right" : {
-        "format" : "{capacity}%",
+	"clock#hour": {
+		"on-click" : "eww windows | grep -i *sliders && eww close sliders || eww open sliders",
+        "format": "{:%I}"
     },
-	    "clock": {
-        "format": "{:%b %d %H:%M}"
+	"clock#min": {
+		"on-click" : "eww windows | grep -i *sliders && eww close sliders || eww open sliders",
+        "format": "{:%M}"
     }
 }

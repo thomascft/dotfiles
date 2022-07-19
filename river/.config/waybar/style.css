@@ -1,84 +1,65 @@
 /* GTK_DEBUG=interactive waybar */
+	@define-color bg0 #11121D;
+	@define-color bg1 #1A1B2A;
+    @define-color bg2 #212234;
+    @define-color bg3 #353945;
+    @define-color bg4 #4A5057;
+    @define-color bg5 #282c34;
+	@define-color fg #A0A8CD;
+	@define-color red #EE6D85;
+	@define-color yellow #D7A65F;
+	@define-color green #95C561;
+	@define-color blue #7199EE;
+
 
 window#waybar {
 	font-family: "Jetbrains Mono", "Symbols Nerd Font";
 	background-color: transparent;
-	color: #A6ACCD;
-	padding: 5px;
+	color: @fg;
 }
 
-.modules-left, .modules-center, .modules-right {
-	padding: 4px;
-	border-radius: 10px;
-}
 .modules-left, .modules-right {
-	background: #192227;
-	color: #192227;
-}
-
-.left {
-	padding: 0 4px;
-	border-radius: 10px 0 0 10px;
-	margin-left: 4px;
-}
-
-.right {
-	border-radius: 0 10px 10px 0;
-	margin-right: 4px;
-	padding: 0 4px;
+	margin: 10px 0px 10px 10px;
+	/* border-radius: 10px; */
+	background-color: @bg0;
 }
 
 #custom-arch {
-	padding: 0 8px;
-	border-radius: 25%;
-	color: #192227;
-	background-color: #82AAFF;
-	margin-right: 4px;
+	padding: 10px 0px;
+	/* border-radius: 25%; */
+	color: @bg0;
+	background-color: @blue;
 }
 
+#tags {
+	padding: 5px;
+}
 #tags button {
-	color: #546E7A;
-	border-radius: 25%;
-	margin: 4px;
-	padding: 0px 2px;
+	border-radius: 0px;
+	margin: 10px 0px;
+	padding: 0px 4px;
 }
 #tags button.occupied {
-	color: #A6ACCD;
+	color: @blue;
 }
 #tags button.focused {
-	color: #192227;
-	background-color: #82AAFF;
+	color: @bg0;
+	background-color: @blue;
 }
-#custom-tray-label {
-	padding: 0 10px;
-	border-radius: 10px;
-	color: #B0BEC5;
+#pulseaudio {
+	color: @red;
+	padding: 15px 0;
 }
-#tray {
-	margin-right: 4px;
-	padding: 0 4px;
+#backlight {
+	color: @yellow;
+	padding: 15px 0;
 }
-
-#pulseaudio.left {
-	color: #DC6068;
-}
-#pulseaudio.right {
-	color: #F07178;
-}
-#backlight.left {
-	color: #E6B455;
-}
-#backlight.right {
-	color: #FFCB6B;
-}
-#battery.left {
-	color: #ABCF76;
-}
-#battery.right {
-	color: #C3E88D;
+#battery {
+	color: @green;
+	padding: 15px 0;
 }
 #clock {
-	border-radius: 10px;
+	background-color: @blue;
+	color: @bg0;
 	padding: 0 4px;
-	background-color: #82AAFF;
 }

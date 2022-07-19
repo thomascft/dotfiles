@@ -1,0 +1,55 @@
+$bg0: #11121D;
+$bg1: #1A1B2A;
+$bg2: #212234;
+$bg3: #353945;
+$bg4: #4A5057;
+$bg5: #282c34;
+$fg: #A0A8CD;
+$black: #06080A;
+$red: #EE6D85;
+$yellow: #D7A65F;
+$green: #95C561;
+$blue: #7199EE;
+
+
+window {
+	font-family: "Jetbrains Mono", "Symbols Nerd Font";
+	background-color: $bg2;
+}
+slider {
+all:unset;
+}
+.slider_sm {
+	margin: 10px;
+	trough {
+		background-color: $bg1;
+		border-radius: 0px;
+	}
+	highlight {
+		border-radius: 0px;
+		padding: 7px
+	}
+	label {
+		color: $bg4;
+		margin: 0 10px;
+		// border-radius: 10px;
+	}
+	&.volume {
+		highlight {
+			background-color: $red;
+		}
+	}
+	&.brightness {
+		highlight {
+			background-color: $yellow;
+		}
+	}
+	&.battery {
+		highlight {
+			background-color: $green;
+		}
+	}
+
+}
+
+
