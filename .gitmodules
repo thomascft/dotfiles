@@ -6,3 +6,7 @@
 	path = spotify/.config/spicetify/CustomApps/combined-playlists
 	url = https://github.com/jeroentvb/spicetify-combined-playlists/
 	branch = dist
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
