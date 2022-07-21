@@ -1,68 +1,29 @@
-# Install Guide
+# Install
 
-## System Setup
+- Basic tools `pacman -S git base-devel nvim zsh`
 
-I Like [Artix](https://artixlinux.org/) which is an [Arch](https://archlinux.org/) fork with systemd alternaties. We'll be using the same init system as [Void](voidlinux.org) called runit.
+- Internet `pacman -S dhcpcd iwd`
 
+- Aur Helper [paru](https://github.com/Morganamilo/paru)
 
-1. Burn the ISO you chose to a usb drive with [Balena Etcher](https://www.balena.io/etcher/)
+	1. Clone paru `git clone https://aur.archlinux.org/paru.git`
 
-1. Boot and Install (Artix) using [Guide](https://wiki.artixlinux.org/Main/Installation  
+	2. Make paru `cd paru && makepkg -si`
 
-	- I'll be using BTRFS with subvolumes and a seperate home partition.
+- System Administration `pacman -S snapper opendoas man-db`
 
-	- Before you chroot to the new system install some important tools with `basestrap /mnt nvim git`
-	
-## User Setup
+- Drivers `amdvlk mesa`
 
-### Auomatic Install
+- Fonts `paru -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols ttf-victor-mono`
 
-W.I.P.
+- General `paru -S firefox discord wezterm brightnessctl xdg-usir-dirs xdg-utils`
 
-### Manual Install
+- Wayland `river swaybg swayidle swaylock waybar wofi wl-clipboard eww-wayland-git`
 
-1. Install Basics `pacman -Sy git zsh`
+- Audio `paru -S wireplumber pipewire-pulse pipewire-jack spotify spicetify-cli mpd mpDris2 playerctl pamixer`
 
-1. Install AUR Helper(I'll be using [paru](https://github.com/morganamilo/paru))
+- Image `paru -S gimp inkscape`
 
-	- Clone paru to .cache `git clone https://aur.archlinux.org/paru.git .cache/paru-tmp`
+- Code `paru -S neovide rustup lazygit`
 
-	- Move to dir and build `cd ~/.cache/paru-tmp && makepkg -si`
-
-1. Setup Desktop Enviroment `paru -Sy river waybar wofi eww-wayland-git wezterm firefox`
-
-	- Setup firefox
-
-		- Create profile with [ffprofile](https://ffprofile.com/)
-
-		Or
-
-		- Disable Telemetry and Install [UBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
-
-1. Setup Tooling
-
-	- Install and Setup Neovim `paru -S nvim neovide`
-
-	- Install Extra Dependencies `paru -S ripgrep`
-
-1. Install Media Stuff
-
-	- Control Software `paru -S pamixer pipewire pipewire-pulse wireplumber playerctl`
-
-	- PipeWire
-
-		- Enable Services `systemctl enable --user --now wireplumber pipewire pipewire-pulse`
-
-	- Setup Spotify
-
-		* Install `paru -S spotify spicetify-cli`
-
-		* Setup Spicetify `spicetify backup apply`
-
-	- Setup mpd
-			
-		* Install `paru -S mpd && mpDris2`
-
-		* Enable Services `systemctl enable --user mpDris2 mpd`
-		
-	- Graphics Software `paru -S gimp inkscape`
+- Utils `bat lsd dust p7zip xdg-ninja glow`
