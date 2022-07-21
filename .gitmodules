@@ -1,7 +1,7 @@
-[submodule "zplug"]
-	path = zplug
-	url = https://github.com/zplug/zplug
 [submodule ".dotbot"]
 	path = .dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule ".packer.nvim"]
+	path = .packer.nvim
+	url = https://github.com/wbthomason/packer.nvim
