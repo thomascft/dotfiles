@@ -16,7 +16,7 @@
 
 - Fonts `paru -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols ttf-victor-mono`
 
-- General `paru -S firefox discord wezterm brightnessctl xdg-usir-dirs xdg-utils`
+- General `paru -S firefox discord wezterm brightnessctl xdg-usir-dirs xdg-utils stalonetray`
 
 - Wayland `river swaybg swayidle swaylock waybar wofi wl-clipboard eww-wayland-git`
 

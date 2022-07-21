@@ -1,4 +1,13 @@
 local wk = require("which-key")
+local Terminal  = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new {
+  	cmd = "lazygit",
+	hidden = true,
+  	direction = "float", 
+  	float_opts = {
+		border = "double",
+	},
+}
 
 local termcode = function(str)
 	return vim.api.nvim_replace_termcodes(str, true, true, true)
@@ -14,6 +23,7 @@ local normal_bindings = {
     e = {
 	name = "Editor",
 	e = { "<cmd>NvimTreeToggle<cr>", "Toggle NvimTree"},
+	g = { function() lazygit:toggle() end, "Toggle lazygit"}
     },
     f = {
 	name = "File",
@@ -40,3 +50,5 @@ local terminal_bindings = {
 wk.register(normal_bindings, { prefix = "<leader>" })
 wk.register(terminal_bindings, { mode = "t" })
 wk.register(command_bindings, { mode = "c" })
+
+

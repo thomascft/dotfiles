@@ -15,6 +15,7 @@ return require("packer").startup(function()
     use "rebelot/kanagawa.nvim"
     use "marko-cerovac/material.nvim"
     use "folke/tokyonight.nvim"
+    use "tiagovla/tokyodark.nvim"
 
     -- Common Libraries
     use "nvim-lua/plenary.nvim"
