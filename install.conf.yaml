@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+- clean:
+  - "~"
+- link:
+    "~/.config/nvim": nvim
+    "~/.config/river": river
+    "~/.config/waybar": waybar
+    "~/.config/wofi": wofi
+    "~/.config/wezterm": wezterm
+    "~/.config/eww": eww
+    "~/.zshrc": zsh/zshrc
+    "~/.zshenv": zsh/zshenv
+    "~/.zplug": zplug
+
