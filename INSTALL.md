@@ -24,6 +24,6 @@
 
 - Image `paru -S gimp inkscape`
 
-- Code `paru -S neovide rustup lazygit`
+- Code `paru -S neovide rustup lazygit github-cli`
 
 - Utils `bat lsd dust p7zip xdg-ninja glow`
