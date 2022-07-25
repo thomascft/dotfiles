@@ -1,23 +1,21 @@
 {
 	"layer" : "top",
-	"position" : "top", 
+	"position" : "left", 
 	"mode" : "dock",
-	"margin-left" : 10,
-	"margin-right" : 10,
-	"margin-top" : 10,
-	"modules-left" : ["custom/arch", "custom/song-previous", "custom/song-playpause", "custom/song-next", "river/tags", "river/mode"],
-	"modules-center" : ["river/window"],
-	"modules-right" : ["custom/tray-label", "tray", "pulseaudio#icon", "pulseaudio#volume", "backlight#icon", "backlight#level", "battery#icon","battery#percent", "custom/clock-icon","clock"],
+	"modules-left" : ["custom/arch",  "river/tags",],
+	"modules-center" : [],
+	"modules-right" : ["pulseaudio", "backlight", "battery", "clock#hour", "clock#min"],
 	"custom/arch" : {
-		"format" : ""
+		"format" : "",
+		"on-click" : "eww windows | grep -i *dashboard && eww close dashboard || eww open dashboard"
 	},
 
-	"custom/song-previous" : {
+	"custom/previous#music" : {
 		"format" : "ﭢ",
 		"on-click" : "playerctl previous",
 		"tooltip" : false
 	},
-	"custom/song-playpause" : {
+	"custom/playpause#music" : {
 		"format" : "{icon}",
 		"return-type" : "json",
 		"format-icons" : {
@@ -28,7 +26,7 @@
 		"on-click" : "playerctl play-pause",
 		"tooltip" : false
 	},
-	"custom/song-next" : {
+	"custom/next#music" : {
 		"format" : "ﭠ",
 		"on-click" : "playerctl next",
 		"tooltip" : false
@@ -39,14 +37,9 @@
 	"river/tags" : {
 		"num-tags" : 10,
 		"tag-labels" : ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"]
-	},
-	"river/window" : {
-		"max-length" : 50,
-	},
-	"custom/tray-label" : {
-		"format" : ""
-	},
-	"pulseaudio#icon" : {
+		},
+	"pulseaudio" : {
+		"on-click" : "eww windows | grep -i *sliders && eww close sliders || eww open sliders",
 		"format" : "{icon}",
 		"format-muted" : "ﱝ",
 		"format-icons" : {
@@ -56,24 +49,22 @@
         	"default": ["", ""]
 		}
 	},
-	"backlight#icon" : {
+	"backlight" : {
+		"on-click" : "eww windows | grep -i *sliders && eww close sliders || eww open sliders",
 		"format" : "{icon}",
 		"format-icons" : ["", "", "", "", "", "", ""]
 	},
-	"backlight#level" : {
-		"format" : "{percent}%" 
-	},
-	"battery#icon" : {
+	"battery" : {
+		"on-click" : "eww windows | grep -i *sliders && eww close sliders || eww open sliders",
         "format-icons" : ["", "", "", "", ""],
 		"format" : "{icon}",
 	},
-	"battery#percent" : {
-        "format" : "{capacity}%",
+	"clock#hour": {
+		"on-click" : "eww windows | grep -i *sliders && eww close sliders || eww open sliders",
+        "format": "{:%I}"
     },
-	"custom/clock-icon" : {
-		"format" : "",
-	},
-    "clock": {
-        "format": "{:%b %d %H:%M}"
+	"clock#min": {
+		"on-click" : "eww windows | grep -i *sliders && eww close sliders || eww open sliders",
+        "format": "{:%M}"
     }
 }

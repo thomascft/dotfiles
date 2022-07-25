@@ -1,8 +1,10 @@
-[submodule "Spicetify-Marketplace"]
-	path = spotify/.config/spicetify/CustomApps/marketplace
-	url = https://github.com/spicetify/spicetify-marketplace
-	branch = dist
-[submodule "spicetify-combi-playlists"]
-	path = spotify/.config/spicetify/CustomApps/combined-playlists
-	url = https://github.com/jeroentvb/spicetify-combined-playlists/
-	branch = dist
+[submodule ".dotbot"]
+	path = .dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule ".packer.nvim"]
+	path = .packer.nvim
+	url = https://github.com/wbthomason/packer.nvim
+[submodule ".zplug"]
+	path = .zplug
+	url = https://github.com/zplug/zplug
