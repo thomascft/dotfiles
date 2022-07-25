@@ -7,7 +7,8 @@ vim.opt.cursorline = true
 vim.opt.wrap = false
 vim.notify = require("notify")
 
-
+vim.opt.foldmethod= "expr"
+vim.opt.foldexpr= "nvim_treesitter#foldexpr()"
 
 --Completion
 vim.opt.completeopt="menu,menuone,noselect"

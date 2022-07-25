@@ -1,5 +1,6 @@
 - defaults:
     link:
+      create: true
       relink: true
 - clean:
   - "~"
@@ -12,5 +13,7 @@
     "~/.config/eww": eww
     "~/.zshrc": zsh/zshrc
     "~/.zshenv": zsh/zshenv
-    "~/.zplug": zplug
+    "~/.config/paru/paru.conf": paru.conf
+    "~/.zplug": .zplug
+    "~/.local/share/nvim/site/pack/packer/start/packer.nvim" : .packer.nvim
 

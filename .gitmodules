@@ -5,3 +5,6 @@
 [submodule ".packer.nvim"]
 	path = .packer.nvim
 	url = https://github.com/wbthomason/packer.nvim
+[submodule ".zplug"]
+	path = .zplug
+	url = https://github.com/zplug/zplug

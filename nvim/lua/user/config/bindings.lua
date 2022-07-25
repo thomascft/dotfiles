@@ -34,7 +34,10 @@ local normal_bindings = {
 	name = "Session",
 	s = { "<cmd>Telescope persisted<cr>", "Open Session Picker"},
 	l = { "<cmd>SessionLoadLast<cr>", "Load Last Session"},
-    }
+    },
+	b = {
+		-- f = {"<cmd>fold<cr>", "Toggle Fold"}
+	}
 }
 
 local command_bindings = {

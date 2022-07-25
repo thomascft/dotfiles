@@ -14,3 +14,5 @@ git submodule sync --recursive
 git submodule update --init --recursive
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+
+nvim +PackerSync
