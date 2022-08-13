@@ -1,0 +1,85 @@
+/* GTK_DEBUG=interactive waybar */
+	@define-color bg0 #11121D;
+	@define-color bg1 #1A1B2A;
+    @define-color bg2 #212234;
+    @define-color bg3 #353945;
+    @define-color bg4 #4A5057;
+    @define-color bg5 #282c34;
+	@define-color fg #A0A8CD;
+	@define-color red #EE6D85;
+	@define-color yellow #D7A65F;
+	@define-color green #95C561;
+	@define-color blue #7199EE;
+
+
+window#waybar {
+	font-family: "Jetbrains Mono", "Symbols Nerd Font";
+	background-color: transparent;
+	color: @fg;
+}
+#workspaces button {
+	all: unset;
+	background-color: @bg0;
+	border-radius: 10px;
+	padding: 0px 10px 0px 10px;
+	margin: 5px;
+}
+#workspaces button.active {
+	background-color: @red;
+	color: @bg0;
+	margin: 0px 5px 0px 5px;
+	padding: 0px 15px 0px 15px;
+}
+
+#custom-sep {
+	background-color: @bg0;
+	color: @bg0;
+	margin: 10px 0px 10px 0px;
+	padding: 0px 10px 0px 10px;
+}
+#custom-left {
+	background-color: @bg0;
+	color: @bg0;
+	margin: 10px 0px 10px 0px;
+	padding: 0px 10px 0px 10px;
+	border-radius: 10px 0px 0px 10px;
+}
+#custom-right {
+	background-color: @bg0;
+	color: @bg0;
+	margin: 10px 0px 10px 0px;
+	padding: 0px 10px 0px 10px;
+	border-radius: 0px 10px 10px 0px;
+}
+#network {
+	padding: 5px 15px 5px 15px;
+	color: @bg0;
+	background-color: @blue;
+	border-radius: 10px;	
+}
+
+#pulseaudio {
+	padding: 5px 15px 5px 15px;
+	color: @bg0;
+	background-color: @green;
+	border-radius: 10px;	
+}
+#battery {
+	padding: 5px 15px 5px 15px;
+	color: @bg0;
+	background-color: @yellow;
+	border-radius: 10px;	
+}
+#clock {
+	padding: 5px 15px 5px 15px;
+	color: @bg0;
+	background-color: @red;
+	border-radius: 10px;	
+}
+#custom-notification {
+	padding: 5px 15px 5px 15px;
+	color: @bg0;
+	background-color: @fg;
+	border-radius: 10px;	
+}
+

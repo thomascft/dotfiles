@@ -1,0 +1,5 @@
+require ( (...) .. ".builtin" )
+require ( (...) .. ".treesitter" )
+require ( (...) .. ".cmp" )
+require ( (...) .. ".lsp")
+require ( (...) .. ".binds")

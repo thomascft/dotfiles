@@ -1,1 +1,0 @@
-require("persisted").setup() 

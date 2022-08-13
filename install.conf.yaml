@@ -1,0 +1,24 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+- clean:
+  - "~"
+- link:
+    # Wayland
+    "~/.config/hypr/hyprland.conf": wayland/hyprland.conf
+    "~/.config/waybar": wayland/waybar
+    "~/.config/wofi": wayland/wofi
+    "~/.config/swaylock/config": wayland/swaylock
+    "~/.config/swaync": wayland/swaync
+    # Tools
+    "~/.config/wezterm": tools/wezterm
+    "~/.config/nvim": tools/nvim
+    "~/.config/paru/paru.conf": tools/paru.conf
+    # Zsh
+    "~/.zshrc": tools/zsh/zshrc
+    "~/.zshenv": tools/zsh/zshenv
+    "~/.zplug": .zplug
+    # Music
+    "~/.config/mpd/mpd.conf": mpd/mpd.conf
+

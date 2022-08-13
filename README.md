@@ -5,14 +5,13 @@
 It's not super organized, but feel free to take a look. I've been daily driving these for just over a year now.
 
 ## Screenshots
-![preview1](https://raw.githubusercontent.com/thomascft/dotfiles/master/assets/1.png)
-![preview2](https://raw.githubusercontent.com/thomascft/dotfiles/master/assets/2.png)
+![preview](https://raw.githubusercontent.com/thomascft/dotfiles/master/assets/preview.png)
 
 ## Featured
-- [RiverWM](https://github.com/riverwm/river)
+- [Hyprland](https://github.com/hyprwm/Hyprland)
 - [Wofi](https://hg.sr.ht/~scoopta/wofi)
 - [Waybar](https://github.com/Alexays/Waybar)
+- [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
 - [WezTerm](https://github.com/wez/wezterm)
-- [Xplr](https://github.com/sayanarijit/xplr)
-- [NeoVim](https://neovim.io) + [Neovide](https://github.com/neovide/neovide)
+- [NeoVim](https://neovim.io)
 - [Zsh](https://www.zsh.org/)
