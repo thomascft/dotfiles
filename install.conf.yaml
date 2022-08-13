@@ -5,15 +5,20 @@
 - clean:
   - "~"
 - link:
-    "~/.config/nvim": nvim
-    "~/.config/river": river
-    "~/.config/waybar": waybar
-    "~/.config/wofi": wofi
-    "~/.config/wezterm": wezterm
-    "~/.config/eww": eww
-    "~/.zshrc": zsh/zshrc
-    "~/.zshenv": zsh/zshenv
-    "~/.config/paru/paru.conf": paru.conf
+    # Wayland
+    "~/.config/hypr/hyprland.conf": wayland/hyprland.conf
+    "~/.config/waybar": wayland/waybar
+    "~/.config/wofi": wayland/wofi
+    "~/.config/swaylock/config": wayland/swaylock
+    "~/.config/swaync": wayland/swaync
+    # Tools
+    "~/.config/wezterm": tools/wezterm
+    "~/.config/nvim": tools/nvim
+    "~/.config/paru/paru.conf": tools/paru.conf
+    # Zsh
+    "~/.zshrc": tools/zsh/zshrc
+    "~/.zshenv": tools/zsh/zshenv
     "~/.zplug": .zplug
-    "~/.local/share/nvim/site/pack/packer/start/packer.nvim" : .packer.nvim
+    # Music
+    "~/.config/mpd/mpd.conf": mpd/mpd.conf
 
