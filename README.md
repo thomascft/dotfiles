@@ -15,3 +15,9 @@ It's not super organized, but feel free to take a look. I've been daily driving 
 - [WezTerm](https://github.com/wez/wezterm)
 - [NeoVim](https://neovim.io)
 - [Zsh](https://www.zsh.org/)
+
+## Install
+
+### Dependencies
+
+`paru -Sy hyprland-git waybar wofi swaync-git wayshot-bin slurp swaylock-color swayidle`
