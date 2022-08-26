@@ -15,6 +15,7 @@
     "~/.config/wezterm": tools/wezterm
     "~/.config/nvim": tools/nvim
     "~/.config/paru/paru.conf": tools/paru.conf
+    "~/.config/neofetch/config.conf": tools/neofetch.conf
     # Zsh
     "~/.zshrc": tools/zsh/zshrc
     "~/.zshenv": tools/zsh/zshenv
