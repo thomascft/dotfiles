@@ -5,12 +5,7 @@
 - clean:
   - "~"
 - link:
-    # Wayland
-    "~/.config/hypr/hyprland.conf": wayland/hyprland.conf
-    "~/.config/waybar": wayland/waybar
-    "~/.config/wofi": wayland/wofi
-    "~/.config/swaylock/config": wayland/swaylock
-    "~/.config/swaync": wayland/swaync
+    "~/.config/awesome": awesome
     # Tools
     "~/.config/wezterm": tools/wezterm
     "~/.config/nvim": tools/nvim
