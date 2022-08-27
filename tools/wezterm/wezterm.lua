@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 
 return {
-	font = wezterm.font_with_fallback({{family="Victor Mono", weight="Medium"}, "FreeMono"}),
+	font = wezterm.font_with_fallback({{family="Iosevka", weight="Regular"}, "FreeMono"}),
 	font_size = 12,
 	color_scheme = "tokyodark",
 	window_background_opacity = 1,

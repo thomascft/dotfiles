@@ -12,20 +12,51 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "sans 8"
+theme.colorscheme = {
+    black = "#06080A",
+    bg0 = "#11121D",
+    bg1 = "#1A1B2A",
+    bg2 = "#212234",
+    bg3 = "#353945",
+    bg4 = "#4A5057",
+    bg5 = "#282c34",
+    bg_red = "#FE6D85",
+    bg_green = "#98C379",
+    bg_blue = "#9FBBF3",
+    diff_red = "#773440",
+    diff_green = "#587738",
+    diff_blue = "#354A77",
+    diff_add = "#1E2326",
+    diff_change = "#262b3d",
+    diff_delete = "#281B27",
+    fg = "#A0A8CD",
+    red = "#EE6D85",
+    orange = "#F6955B",
+    yellow = "#D7A65F",
+    green = "#95C561",
+    blue = "#7199EE",
+    cyan = "#38A89D",
+    purple = "#A485DD",
+    grey = "#4A5057",
+    none = "NONE",
+}
+theme.accent = theme.colorscheme.purple
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
+
+theme.font          = "Iosevka Medium 11"
+
+theme.bg_normal     = theme.colorscheme.bg0
+theme.bg_focus      = theme.colorscheme.bg2
+theme.bg_urgent     = theme.diff_red
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
+theme.fg_normal     = theme.colorscheme.fg
 theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap         = dpi(0)
+theme.useless_gap         = dpi(5)
 theme.border_width        = dpi(1)
 theme.border_color_normal = "#000000"
 theme.border_color_active = "#535d6c"
@@ -97,7 +128,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = themes_path.."default/background.png"
+theme.wallpaper = "Pictures/wallpapers/TokyoDark/Minimal_Arch_Purple.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
