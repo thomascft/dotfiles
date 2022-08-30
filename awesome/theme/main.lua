@@ -62,6 +62,8 @@ theme.border_color_normal = "#000000"
 theme.border_color_active = "#535d6c"
 theme.border_color_marked = "#91231c"
 
+theme.wibar_height = dpi(30)
+
 -- There are other variable sets
 -- overriding the default one when
 -- defined, the sets are:

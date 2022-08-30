@@ -36,6 +36,7 @@ _M.setup = function(s)
 			widget = awful.widget.taglist {
 				screen = s,
 				filter = awful.widget.taglist.filter.all,
+				buttons = buttons,
 				style = {
 					spacing = 5,
 				},

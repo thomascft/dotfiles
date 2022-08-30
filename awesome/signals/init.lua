@@ -3,6 +3,7 @@ local wibox = require("wibox")
 local ruled = require("ruled")
 local naughty = require("naughty")
 local beautiful = require("beautiful")
+local gears = require("gears")
 
 -- {{{ Tag layout
 -- Table of layouts to cover with awful.layout.inc, order matters.
@@ -49,6 +50,7 @@ end)
 
 screen.connect_signal("request::desktop_decoration", function(s)
 	require("ui.bar").setup(s)
+	require("ui.popup").setup(s)
 end)
 
 
@@ -105,7 +107,9 @@ ruled.client.connect_signal("request::rules", function()
     -- }
 end)
 -- }}}
-
+client.connect_signal("manage", function(c)
+	c.shape = gears.shape.rounded_rect
+end)
 -- {{{ Titlebars
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
 client.connect_signal("request::titlebars", function(c)
