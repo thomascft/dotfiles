@@ -6,9 +6,11 @@ local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local rnotification = require("ruled.notification")
 local dpi = xresources.apply_dpi
+local gears = require("gears")
 
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
+local new_theme_path = os.getenv("HOME") .. ".config/awesome/themes/"
 
 local theme = {}
 
@@ -57,12 +59,15 @@ theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap         = dpi(5)
-theme.border_width        = dpi(1)
-theme.border_color_normal = "#000000"
-theme.border_color_active = "#535d6c"
-theme.border_color_marked = "#91231c"
+theme.border_width        = dpi(5)
+theme.border_color_normal = theme.bg_normal
+theme.border_color_active = theme.border_color_normal
+theme.border_color_marked = theme.accent
 
-theme.wibar_height = dpi(30)
+theme.wibar_width = dpi(40)
+theme.wibar_height = dpi(1040)
+
+theme.notification_shape = gears.shape.rounded_rect
 
 -- There are other variable sets
 -- overriding the default one when
@@ -104,11 +109,11 @@ theme.menu_width  = dpi(100)
 --theme.bg_widget = "#cc0000"
 
 -- Define the image to load
-theme.titlebar_close_button_normal = themes_path.."default/titlebar/close_normal.png"
-theme.titlebar_close_button_focus  = themes_path.."default/titlebar/close_focus.png"
+theme.titlebar_close_button_normal = ".config/awesome/theme/assets/close.svg"
+theme.titlebar_close_button_focus  = ".config/awesome/theme/assets/close.svg"
 
-theme.titlebar_minimize_button_normal = themes_path.."default/titlebar/minimize_normal.png"
-theme.titlebar_minimize_button_focus  = themes_path.."default/titlebar/minimize_focus.png"
+theme.titlebar_minimize_button_normal = ".config/awesome/theme/assets/minimize.svg"
+theme.titlebar_minimize_button_focus  = ".config/awesome/theme/assets/minimize.svg"
 
 theme.titlebar_ontop_button_normal_inactive = themes_path.."default/titlebar/ontop_normal_inactive.png"
 theme.titlebar_ontop_button_focus_inactive  = themes_path.."default/titlebar/ontop_focus_inactive.png"
@@ -125,8 +130,8 @@ theme.titlebar_floating_button_focus_inactive  = themes_path.."default/titlebar/
 theme.titlebar_floating_button_normal_active = themes_path.."default/titlebar/floating_normal_active.png"
 theme.titlebar_floating_button_focus_active  = themes_path.."default/titlebar/floating_focus_active.png"
 
-theme.titlebar_maximized_button_normal_inactive = themes_path.."default/titlebar/maximized_normal_inactive.png"
-theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar/maximized_focus_inactive.png"
+theme.titlebar_maximized_button_normal_inactive = ".config/awesome/theme/assets/maximize.svg"
+theme.titlebar_maximized_button_focus_inactive  = ".config/awesome/theme/assets/maximize.svg"
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 

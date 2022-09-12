@@ -27,6 +27,7 @@ local buttons = {
 _M.setup = function(s)
 	return wibox.container.place {
 		widget = wibox.container.background,
+		--layout = wibox.layout.fixed.vertical,
 		shape = gears.shape.rounded_bar,
 		bg = beautiful.colorscheme.bg2,
 		{
@@ -34,6 +35,7 @@ _M.setup = function(s)
 		widget = wibox.container.margin,
 		{
 			widget = awful.widget.taglist {
+		layout = wibox.layout.fixed.vertical,
 				screen = s,
 				filter = awful.widget.taglist.filter.all,
 				buttons = buttons,
@@ -45,8 +47,8 @@ _M.setup = function(s)
 						self.animate = rubato.timed {
 							intro = 0.1,
 							duration = 0.2,
-							subscribed = function(w)
-								self.children[1].forced_width = w
+							subscribed = function(h)
+								self.children[1].forced_height = h
 							end
 						}
 

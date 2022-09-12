@@ -18,22 +18,23 @@ local _M = {}
 _M.setup = function(s)
 	awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
-	-- Create a promptbox for each screen
-	s.mypromptbox = awful.widget.prompt()
+	local layoutbox = wibox.widget {
+		widget = wibox.container.margin,
+		margins = 5,
+		{
+			widget = awful.widget.layoutbox {
+				screen  = s,
+				buttons = {
+					awful.button({}, 1, function() awful.layout.inc(1) end),
+					awful.button({}, 3, function() awful.layout.inc(-1) end),
+					awful.button({}, 4, function() awful.layout.inc(-1) end),
+					awful.button({}, 5, function() awful.layout.inc(1) end),
+				}
+			}
 
-	-- Create an imagebox widget which will contain an icon indicating which layout we're using.
-	-- We need one layoutbox per screen.
-	s.mylayoutbox = awful.widget.layoutbox {
-		screen  = s,
-		buttons = {
-			awful.button({}, 1, function() awful.layout.inc(1) end),
-			awful.button({}, 3, function() awful.layout.inc(-1) end),
-			awful.button({}, 4, function() awful.layout.inc(-1) end),
-			awful.button({}, 5, function() awful.layout.inc(1) end),
 		}
-	}
-	-- Create a tasklist widget
-	s.mytasklist = awful.widget.tasklist {
+	} -- Create a tasklist widget
+	local tasklist = awful.widget.tasklist {
 		screen  = s,
 		filter  = awful.widget.tasklist.filter.currenttags,
 		buttons = {
@@ -48,21 +49,23 @@ _M.setup = function(s)
 
 	-- Create the wibox
 	return awful.wibar {
-		position = "top",
+		position = "left",
 		screen   = s,
+		margins  = beautiful.useless_gap * 2,
+		height   = s.geometry.height - beautiful.useless_gap * 4,
+		shape    = gears.shape.rounded_rect,
 		widget   = {
 			widget = wibox.container.margin,
-			left = 20,
-			right = 20,
+			margins = { top = 8, bottom = 8 },
 			{
-				layout = wibox.layout.align.horizontal,
+				layout = wibox.layout.align.vertical,
 				require("ui.bar.clock").setup(),
 				require("ui.bar.taglist").setup(s),
 				{ -- Right widgets
-					layout = wibox.layout.fixed.horizontal,
-					mykeyboardlayout,
+					layout = wibox.layout.fixed.vertical,
+					require("ui.bar.battery"),
 					wibox.widget.systray(),
-					s.mylayoutbox,
+					layoutbox,
 				},
 			}
 		}
