@@ -6,6 +6,7 @@
   - "~"
 - link:
     "~/.config/awesome": awesome
+    "~/.config/rofi": xorg/rofi
     # Tools
     "~/.config/wezterm": tools/wezterm
     "~/.config/nvim": tools/nvim
