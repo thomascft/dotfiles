@@ -1,11 +1,11 @@
 local wezterm = require("wezterm")
 
 return {
-	font = wezterm.font_with_fallback({{family="Iosevka", weight="Regular"}, "FreeMono"}),
+	font = wezterm.font_with_fallback({{family="Iosevka Semibold"}, "FreeMono"}),
 	font_size = 12,
 	color_scheme = "tokyodark",
 	window_background_opacity = 1,
-	-- hide_tab_bar_if_only_one_tab = true,
+	--hide_tab_bar_if_only_one_tab = true,
 	colors = {
 		tab_bar = {
 			active_tab = {
@@ -32,8 +32,8 @@ return {
 		}
 	},
 	window_frame = {
-		font = wezterm.font { family = 'Roboto', weight = 'Medium' },
-		font_size = 12,
+		--font = wezterm.font { family = 'Iosevka Bold' },
+		font_size = 11,
 		active_titlebar_bg = "#212234",
 		inactive_titlebar_bg = "#212234",
 	},

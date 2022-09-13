@@ -59,7 +59,10 @@ theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap         = dpi(5)
-theme.border_width        = dpi(5)
+
+theme.client_shape = function(self, width, height) gears.shape.rounded_rect(self, width, height, dpi(4)) end
+
+-- theme.border_width        = dpi(5)
 theme.border_color_normal = theme.bg_normal
 theme.border_color_active = theme.border_color_normal
 theme.border_color_marked = theme.accent
@@ -135,7 +138,7 @@ theme.titlebar_maximized_button_focus_inactive  = ".config/awesome/theme/assets/
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "Pictures/wallpapers/TokyoDark/Minimal_Arch_Purple.png"
+theme.wallpaper = "Pictures/wallpapers/TokyoDark/Arch_Purple_Wire.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

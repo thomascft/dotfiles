@@ -41,18 +41,6 @@ awful.keyboard.append_global_keybindings({
 
 -- Focus related keybindings
 awful.keyboard.append_global_keybindings({
-	awful.key({ modkey, }, "j",
-		function()
-			awful.client.focus.byidx(1)
-		end,
-		{ description = "focus next by index", group = "client" }
-	),
-	awful.key({ modkey, }, "k",
-		function()
-			awful.client.focus.byidx(-1)
-		end,
-		{ description = "focus previous by index", group = "client" }
-	),
 	awful.key({ modkey, }, "Tab",
 		function()
 			awful.client.focus.history.previous()
@@ -61,19 +49,6 @@ awful.keyboard.append_global_keybindings({
 			end
 		end,
 		{ description = "go back", group = "client" }),
-	awful.key({ modkey, "Control" }, "j", function() awful.screen.focus_relative(1) end,
-		{ description = "focus the next screen", group = "screen" }),
-	awful.key({ modkey, "Control" }, "k", function() awful.screen.focus_relative(-1) end,
-		{ description = "focus the previous screen", group = "screen" }),
-	awful.key({ modkey, "Control" }, "n",
-		function()
-			local c = awful.client.restore()
-			-- Focus restored client
-			if c then
-				c:activate { raise = true, context = "key.unminimize" }
-			end
-		end,
-		{ description = "restore minimized", group = "client" }),
 })
 
 -- Layout related keybindings
@@ -163,11 +138,11 @@ client.connect_signal("request::default_keybindings", function()
 				c.fullscreen = not c.fullscreen
 				c:raise()
 			end,
-			{ description = "toggle fullscreen", group = "client" }),
+			{ description = "Toggle fullscreen", group = "client" }),
 		awful.key({ modkey, }, "w", function(c) c:kill() end,
 			{ description = "close", group = "client" }),
-		awful.key({ modkey, "Control" }, "space", awful.client.floating.toggle,
-			{ description = "toggle floating", group = "client" }),
+		awful.key({ modkey, }, "s", awful.client.floating.toggle,
+			{ description = "Toggle floating", group = "client" }),
 	})
 end)
 

@@ -1,21 +1,32 @@
 local wibox = require("wibox")
 local awful = require("awful")
+local gears = require("gears")
+local beautiful = require("beautiful")
 local _M = {}
 
 
 local clock = wibox.widget {
-	widget = wibox.container.background,
-	buttons = {
-		awful.button({}, 1, function()
-			awesome.emit_signal("widget::calendar:toggle")
-		end)
-	},
+	widget = wibox.container.place,
+	-- buttons = {
+	--	awful.button({}, 1, function()
+	--		awesome.emit_signal("widget::calendar:toggle")
+	--	end)
+	--},
 	{
-		widget = wibox.widget.textclock("%l:%M"),
+		shape = gears.shape.rounded_rect,
+		bg = beautiful.colorscheme.bg2,
+		widget = wibox.container.background,
+		{
+			margins = 5,
+			widget = wibox.container.margin,
+			{
+				widget = wibox.widget.textclock("%I\n%M"),
+			}
+		}
 	}
 }
 
-_M.setup = function ()
+_M.setup = function()
 	return clock
 end
 
