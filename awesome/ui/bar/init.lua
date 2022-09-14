@@ -51,9 +51,13 @@ _M.setup = function(s)
 	return awful.wibar {
 		position = "left",
 		screen   = s,
-		margins  = beautiful.useless_gap * 2,
+		margins  = {
+			left = beautiful.useless_gap * 2,
+			top = beautiful.useless_gap * 2,
+			bottom = beautiful.useless_gap * 2,
+		},
 		height   = s.geometry.height - beautiful.useless_gap * 4,
-		shape    = gears.shape.rounded_rect,
+		shape = function(self, width, height ) gears.shape.rounded_rect(self, width, height, beautiful.radius) end,
 		widget   = {
 			widget = wibox.container.margin,
 			margins = { top = 8, bottom = 8 },

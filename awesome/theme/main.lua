@@ -60,6 +60,8 @@ theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap         = dpi(5)
 
+theme.radius = dpi(10)
+
 theme.client_shape = function(self, width, height) gears.shape.rounded_rect(self, width, height, dpi(4)) end
 
 -- theme.border_width        = dpi(5)
@@ -68,7 +70,7 @@ theme.border_color_active = theme.border_color_normal
 theme.border_color_marked = theme.accent
 
 theme.wibar_width = dpi(40)
-theme.wibar_height = dpi(1040)
+theme.wibar_height = dpi(1080) - theme.useless_gap * 4
 
 theme.notification_shape = gears.shape.rounded_rect
 

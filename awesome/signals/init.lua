@@ -40,7 +40,7 @@ end)
 
 screen.connect_signal("request::desktop_decoration", function(s)
 	require("ui.bar").setup(s)
-	require("ui.popup").setup(s)
+	require("ui.panel").setup(s)
 end)
 
 
@@ -98,7 +98,7 @@ ruled.client.connect_signal("request::rules", function()
 end)
 -- }}}
 client.connect_signal("manage", function(c)
-	c.shape = gears.shape.rounded_rect
+		c.shape = function(self, width, height ) gears.shape.rounded_rect(self, width, height, beautiful.radius) end
 end)
 client.connect_signal("request::titlebars", function(c)
 	-- require("ui.titlebar").setup(c)
