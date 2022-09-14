@@ -17,7 +17,7 @@ local battery_template = wibox.widget {
 	background_color = beautiful.colorscheme.bg2,
 	margins          = dpi(1),
 	color            = beautiful.colorscheme.green,
-	shape = function(self, width, height) gears.shape.rounded_rect(self, width, height, dpi(4)) end,
+	shape            = function(self, width, height) gears.shape.rounded_rect(self, width, height, dpi(4)) end,
 	value            = 25,
 
 }
@@ -38,11 +38,11 @@ local battery_container = wibox.container.place {
 			widget = wibox.container.margin,
 			margins = dpi(2),
 			{
-			widget = wibox.container.background,
-			shape = gears.shape.rounded_bar,
-			bg = beautiful.colorscheme.bg4,
-			forced_height = dpi(2),
-			forced_width = dpi(8),
+				widget = wibox.container.background,
+				shape = gears.shape.rounded_bar,
+				bg = beautiful.colorscheme.bg4,
+				forced_height = dpi(2),
+				forced_width = dpi(8),
 			}
 		}
 	},
@@ -58,7 +58,11 @@ local battery_container = wibox.container.place {
 			widget = wibox.container.margin,
 			margins = dpi(2),
 			{
-				widget = battery_widget
+				widget = wibox.container.rotate,
+				direction = "east",
+				{
+					widget = battery_widget
+				}
 			}
 		}
 	}
