@@ -15,6 +15,7 @@ local normal_bindings = {
     e = {
 	name = "Editor",
 	e = { "<cmd>NvimTreeToggle<cr>", "Toggle NvimTree"},
+	f = { function() vim.lsp.buf.formatting_sync() end, "Format File"},
     },
     f = {
 	name = "File",

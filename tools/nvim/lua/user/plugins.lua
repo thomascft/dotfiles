@@ -40,6 +40,7 @@ local plugins = {{
 		{"nvim-telescope/telescope.nvim", requires = "nvim-lua/plenary.nvim"},
 		{"olimorris/persisted.nvim"},
 		{"windwp/nvim-autopairs", config = function () require("nvim-autopairs").setup {} end},
+		{"numToStr/Comment.nvim"}
 	}
 }}
 
