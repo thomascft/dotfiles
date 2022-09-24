@@ -1,2 +1,2 @@
-
-nvim/plugin/
+**/nvim/plugins
+runit/**/supervise

@@ -1,0 +1,5 @@
+# -*- mode: sh; -*-
+
+OPTS=" "
+
+LOG_DIR="$HOME/.local/var/log/fcitx5"
