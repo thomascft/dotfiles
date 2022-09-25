@@ -7,5 +7,7 @@ vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.wrap = false
 
+vim.opt.fillchars = "eob: "
+
 -- setting for autocomplete
 vim.opt.completeopt="menu,menuone,noselect"
