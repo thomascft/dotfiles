@@ -10,16 +10,28 @@ local upower_widget = require("modules.battery")
 
 
 local battery_template = wibox.widget {
-	widget = wibox.widget.progressbar,
+	layout = wibox.layout.stack,
+	{
+		widget = wibox.container.rotate,
+		direction = "east",
+		{
 
-	max_value        = 100,
-	-- forced_height = dpi(5),
-	background_color = beautiful.colorscheme.bg2,
-	margins          = dpi(1),
-	color            = beautiful.colorscheme.green,
-	shape            = function(self, width, height) gears.shape.rounded_rect(self, width, height, dpi(4)) end,
-	value            = 25,
-
+			widget           = wibox.widget.progressbar,
+			max_value        = 100,
+			-- forced_height = dpi(5),
+			margins          = dpi(1),
+			background_color = beautiful.colorscheme.bg2,
+			color            = beautiful.colorscheme.green,
+			shape            = function(self, width, height) gears.shape.rounded_rect(self, width, height, dpi(4)) end,
+			value            = 25,
+		}
+	},
+	{
+		widget = wibox.widget.imagebox,
+		image = beautiful.charging_icon,
+		valign = "center",
+		halign = "center",
+	}
 }
 
 
@@ -28,7 +40,6 @@ local battery_widget = upower_widget {
 	instant_update = true,
 	widget_template = battery_template
 }
-
 
 local battery_container = wibox.container.place {
 	layout = wibox.layout.fixed.vertical,
@@ -43,7 +54,8 @@ local battery_container = wibox.container.place {
 				bg = beautiful.colorscheme.bg4,
 				forced_height = dpi(2),
 				forced_width = dpi(8),
-			}
+			},
+
 		}
 	},
 	{
@@ -58,19 +70,19 @@ local battery_container = wibox.container.place {
 			widget = wibox.container.margin,
 			margins = dpi(2),
 			{
-				widget = wibox.container.rotate,
-				direction = "east",
-				{
-					widget = battery_widget
-				}
+				widget = battery_widget
 			}
 		}
 	}
 }
 
 battery_widget:connect_signal('upower::update', function(widget, device)
-	widget.value = device.percentage
-	-- widget.color = "#ff0000"
+	widget.children[1].children[1].value = device.percentage
+	if device.state == 1 then
+		widget.children[2].visible = true
+	else
+		widget.children[2].visible = false
+	end
 end)
 
 return battery_container

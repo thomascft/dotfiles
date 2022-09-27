@@ -97,9 +97,21 @@ ruled.client.connect_signal("request::rules", function()
     -- }
 end)
 -- }}}
-client.connect_signal("manage", function(c)
+local rounded_corners = function (c)
+	if c.maximized == true then
+		c.shape = nil
+	elseif c.fullscreen == true then
+		c.shape = nil
+	else
 		c.shape = function(self, width, height ) gears.shape.rounded_rect(self, width, height, beautiful.radius) end
+	end
+end
+
+client.connect_signal("manage", function(c)
+	rounded_corners(c)
 end)
+client.connect_signal("property::fullscreen", function(c) rounded_corners(c) end)
+client.connect_signal("property::maximized", function(c) rounded_corners(c) end)
 client.connect_signal("request::titlebars", function(c)
 	-- require("ui.titlebar").setup(c)
 end)
@@ -122,3 +134,4 @@ naughty.connect_signal("request::display", function(n)
 end)
 
 -- }}}
+require("signals.volume")

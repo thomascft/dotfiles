@@ -10,6 +10,7 @@ local gears = require("gears")
 
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
+local assets_path = gfs.get_configuration_dir() .. "theme/assets/"
 local new_theme_path = os.getenv("HOME") .. ".config/awesome/themes/"
 
 local theme = {}
@@ -61,6 +62,8 @@ theme.fg_minimize   = "#ffffff"
 theme.useless_gap         = dpi(5)
 
 theme.radius = dpi(10)
+theme.container_padding = dpi(10)
+theme.container_margins = dpi(10)
 
 theme.client_shape = function(self, width, height) gears.shape.rounded_rect(self, width, height, dpi(4)) end
 
@@ -114,11 +117,16 @@ theme.menu_width  = dpi(100)
 --theme.bg_widget = "#cc0000"
 
 -- Define the image to load
-theme.titlebar_close_button_normal = ".config/awesome/theme/assets/close.svg"
-theme.titlebar_close_button_focus  = ".config/awesome/theme/assets/close.svg"
+theme.titlebar_close_button_normal = assets_path .. "close.svg"
+theme.titlebar_close_button_focus  = assets_path .. "close.svg"
+theme.charging_icon = gears.color.recolor_image(assets_path .. "lightning.svg", theme.colorscheme.bg4)
+theme.volume_icon = gears.color.recolor_image(assets_path .. "volume-up.svg", theme.colorscheme.bg3)
+theme.brightness_icon = gears.color.recolor_image(assets_path .. "brightness.svg", theme.colorscheme.bg3)
 
-theme.titlebar_minimize_button_normal = ".config/awesome/theme/assets/minimize.svg"
-theme.titlebar_minimize_button_focus  = ".config/awesome/theme/assets/minimize.svg"
+
+
+theme.titlebar_minimize_button_normal = assets_path .. "minimize.svg"
+theme.titlebar_minimize_button_focus  = assets_path .. "minimize.svg"
 
 theme.titlebar_ontop_button_normal_inactive = themes_path.."default/titlebar/ontop_normal_inactive.png"
 theme.titlebar_ontop_button_focus_inactive  = themes_path.."default/titlebar/ontop_focus_inactive.png"
@@ -135,12 +143,12 @@ theme.titlebar_floating_button_focus_inactive  = themes_path.."default/titlebar/
 theme.titlebar_floating_button_normal_active = themes_path.."default/titlebar/floating_normal_active.png"
 theme.titlebar_floating_button_focus_active  = themes_path.."default/titlebar/floating_focus_active.png"
 
-theme.titlebar_maximized_button_normal_inactive = ".config/awesome/theme/assets/maximize.svg"
-theme.titlebar_maximized_button_focus_inactive  = ".config/awesome/theme/assets/maximize.svg"
+theme.titlebar_maximized_button_normal_inactive = assets_path .. "maximize.svg"
+theme.titlebar_maximized_button_focus_inactive  = assets_path .. "maximize.svg"
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "Pictures/wallpapers/TokyoDark/Arch_Purple_Wire.png"
+theme.wallpaper = "/home/thomas/Pictures/wallpapers/TokyoDark/Arch_Purple_Wire.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

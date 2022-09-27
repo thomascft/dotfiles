@@ -14,5 +14,6 @@ client.connect_signal("mouse::enter", function(c)
 end)
 
 require("theme")
+require("helpers")
 require("signals")
 require("config")

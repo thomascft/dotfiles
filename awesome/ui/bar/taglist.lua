@@ -45,8 +45,8 @@ _M.setup = function(s)
 				widget_template = {
 					create_callback = function(self, tag, _)
 						self.animate = rubato.timed {
-							intro = 0.1,
-							duration = 0.2,
+							-- intro = 0.1,
+							duration = 0.25,
 							subscribed = function(h)
 								self.children[1].forced_height = h
 							end
