@@ -18,4 +18,5 @@
     "~/.zplug": .zplug
     # Music
     "~/.config/mpd/mpd.conf": mpd/mpd.conf
+    "~/.config/mpDris2/mpDris2.conf": mpd/mpDris2.conf
 
