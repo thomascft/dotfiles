@@ -36,7 +36,7 @@ local battery_template = wibox.widget {
 
 
 local battery_widget = upower_widget {
-	device_path = '/org/freedesktop/UPower/devices/battery_BAT1',
+	use_display_device = true,
 	instant_update = true,
 	widget_template = battery_template
 }
