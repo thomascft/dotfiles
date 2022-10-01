@@ -1,6 +1,7 @@
 local nvim_tree = require("nvim-tree")
 
 local options = {
+	sync_root_with_cwd = true,
 	view = {
 		side = "left",
 		signcolumn = "yes",

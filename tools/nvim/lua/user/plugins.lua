@@ -30,7 +30,11 @@ local plugins = { {
 	},
 	-- Ui
 	{
+		-- Themes
+		{ "folke/tokyonight.nvim" },
 		{ "tiagovla/tokyodark.nvim" },
+		{ "catppuccin/nvim", as = "catppuccin" },
+		-- Other Stuff
 		{ "kyazdani42/nvim-web-devicons" },
 		{ "kyazdani42/nvim-tree.lua" },
 		{ "akinsho/bufferline.nvim" },

@@ -6,6 +6,7 @@ vim.opt.number = true
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.wrap = false
+vim.opt.cursorline = true
 
 vim.opt.fillchars = "eob: "
 
