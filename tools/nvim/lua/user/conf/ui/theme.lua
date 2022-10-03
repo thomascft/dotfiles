@@ -5,4 +5,4 @@ vim.opt.termguicolors = true
 
 -- require("catppuccin").setup()
 
-vim.cmd("colorscheme tokyodark")
+vim.cmd("colorscheme tokyonight-night")
