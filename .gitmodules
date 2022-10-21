@@ -8,12 +8,3 @@
 [submodule ".zplug"]
 	path = .zplug
 	url = https://github.com/zplug/zplug
-[submodule "rubato"]
-	path = awesome/modules/rubato
-	url = https://github.com/andOrlando/rubato
-[submodule "bling"]
-	path = awesome/modules/bling
-	url = https://github.com/BlingCorp/bling.git
-[submodule "awesome-battery"]
-	path = awesome/modules/battery
-	url = https://github.com/Aire-One/awesome-battery_widget
