@@ -1,11 +1,11 @@
 local wezterm = require("wezterm")
 
 return {
-	font = wezterm.font_with_fallback({{family="Iosevka Semibold"}, "FreeMono"}),
+	font = wezterm.font_with_fallback({"Iosevka Semibold", "Symbols Nerd Font", "FreeMono"}),
 	font_size = 12,
-	color_scheme = "tokyodark",
+	color_scheme = "tokyonight",
 	window_background_opacity = 1,
-	--hide_tab_bar_if_only_one_tab = true,
+	hide_tab_bar_if_only_one_tab = true,
 	colors = {
 		tab_bar = {
 			active_tab = {
