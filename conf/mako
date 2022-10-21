@@ -1,0 +1,21 @@
+# ~/.config/mako/config
+
+#
+# General
+#
+
+default-timeout=8000
+
+
+# Decoration
+
+font=iosevka 10
+text-color=#c0caf5
+
+border-radius=8
+border-color=#c0caf5
+border-size=2
+
+background-color=#1a1b26
+
+progress-color=#7aa2f7 #16161e

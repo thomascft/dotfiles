@@ -1,7 +1,0 @@
-configuration {
-modes: "drun,run";
-    display-drun:               "";
-    display-run:                "";
-font: "Iosevka 12";
-}
-@theme "TokyoDark"

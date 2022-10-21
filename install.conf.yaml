@@ -6,20 +6,15 @@
   - "~"
 - link:
     "~/.config/hypr/hyprland.conf": conf/hyprland.conf
-    "~/.config/waybar": waybar
-    "~/.config/eww": eww
-    "~/.config/awesome": awesome
-    "~/.config/rofi": xorg/rofi
-    # Tools
-    "~/.config/wezterm": tools/wezterm
-    "~/.config/nvim": tools/nvim
-    "~/.config/paru/paru.conf": tools/paru.conf
-    "~/.config/neofetch/config.conf": tools/neofetch.conf
+    "~/.config/mako": conf/mako
+    "~/.config/wezterm": conf/wezterm
+    "~/.config/nvim": conf/nvim
+    "~/.config/neofetch": conf/neofetch
     # Zsh
-    "~/.zshrc": tools/zsh/zshrc
-    "~/.zshenv": tools/zsh/zshenv
+    "~/.zshrc": conf/zsh/zshrc
+    "~/.zshenv": conf/zsh/zshenv
     "~/.zplug": .zplug
     # Music
-    "~/.config/mpd/mpd.conf": mpd/mpd.conf
-    "~/.config/mpDris2/mpDris2.conf": mpd/mpDris2.conf
+    "~/.config/mpd/mpd.conf": conf/mpd/mpd.conf
+    "~/.config/mpDris2/mpDris2.conf": conf/mpd/mpDris2.conf
 
