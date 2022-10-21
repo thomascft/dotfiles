@@ -5,6 +5,9 @@
 - clean:
   - "~"
 - link:
+    "~/.config/hypr/hyprland.conf": conf/hyprland.conf
+    "~/.config/waybar": waybar
+    "~/.config/eww": eww
     "~/.config/awesome": awesome
     "~/.config/rofi": xorg/rofi
     # Tools
