@@ -4,9 +4,12 @@ local opts = {
     offsets = {
         {
             filetype = "NvimTree",
-            text = "File Explorer",
-			separator = true
-        }
+            text = "File Explorer ",
+      		-- highlight = "Directory",
+			padding = 1,
+			-- separator = ""
+        },
+		show_close_icon = false
     }
 }
 

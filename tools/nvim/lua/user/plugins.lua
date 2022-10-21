@@ -32,10 +32,12 @@ local plugins = { {
 	{
 		-- Themes
 		{ "folke/tokyonight.nvim" },
+		{ "~/Projects/horizon.nvim" },
 		{ "tiagovla/tokyodark.nvim" },
 		{ "catppuccin/nvim", as = "catppuccin" },
 		-- Other Stuff
 		{ "kyazdani42/nvim-web-devicons" },
+		{ "nvim-telescope/telescope-symbols.nvim" },
 		{ "kyazdani42/nvim-tree.lua" },
 		{ "akinsho/bufferline.nvim" },
 		{ "akinsho/toggleterm.nvim" },
@@ -43,6 +45,7 @@ local plugins = { {
 		-- { "feline-nvim/feline.nvim" },
 		{ "lewis6991/gitsigns.nvim" },
 		{ "lukas-reineke/indent-blankline.nvim" },
+		{ "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup{} end },
 	},
 	-- Extra
 	{
