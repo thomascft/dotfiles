@@ -6,6 +6,7 @@
   - "~"
 - link:
     "~/.config/hypr/hyprland.conf": conf/hyprland.conf
+    "~/.config/waybar": conf/waybar
     "~/.config/swaylock": conf/swaylock
     "~/.config/mako": conf/mako
     "~/.config/wezterm": conf/wezterm

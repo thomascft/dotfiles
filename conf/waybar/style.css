@@ -1,0 +1,66 @@
+/* Tokyo Night */
+@define-color bg_dark #1a1b26;
+@define-color bg #16161e;
+@define-color bg_highlight #292e42;
+@define-color terminal_black #414868;
+@define-color fg #c0caf5;
+@define-color fg_dark #a9b1d6;
+@define-color fg_gutter #3b4261;
+@define-color dark3 #545c7e;
+@define-color comment #565f89;
+@define-color dark5 #737aa2;
+@define-color blue0 #3d59a1;
+@define-color blue #7aa2f7;
+@define-color cyan #7dcfff;
+@define-color blue1 #2ac3de;
+@define-color blue2 #0db9d7;
+@define-color blue5 #89ddff;
+@define-color blue6 #b4f9f8;
+@define-color blue7 #394b70;
+@define-color magenta #bb9af7;
+@define-color magenta2 #ff007c;
+@define-color purple #9d7cd8;
+@define-color orange #ff9e64;
+@define-color yellow #e0af68;
+@define-color green #9ece6a;
+@define-color green1 #73daca;
+@define-color green2 #41a6b5;
+@define-color teal #1abc9c;
+@define-color red #f7768e;
+@define-color red1 #db4b4b;
+
+* {
+	font-family: Iosevka, Symbols Nerd Font;
+	font-size: 16px;
+}
+
+window#waybar {
+	border-radius: 8px;
+	background: @bg;
+	padding: 4px 8px 4px 8px;
+}
+
+widget {
+	padding: 0px;
+	margin: 0px;
+	color: @fg;
+	/* background-color: @bg; */
+}
+
+#workspaces button {
+	color: @fg_dark;
+}
+#workspaces button.active {
+	color: @red;
+}
+
+
+#window {
+	color: @fg_dark;
+}
+
+
+#battery {
+	color: @fg;
+	padding: 0px;
+}
