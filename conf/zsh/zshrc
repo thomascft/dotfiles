@@ -1,4 +1,4 @@
-# Lines configured by zsh-newuser-install
+PS1=$'\n'"%S%n@%m%s %1~"$'\n\n'"  %S%#%s "
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -18,7 +18,6 @@ compinit
 #
 
 source ~/.zplug/init.zsh
-zplug "spaceship-prompt/spaceship-prompt"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
