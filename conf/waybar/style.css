@@ -2,7 +2,7 @@
 @define-color bg_dark #1a1b26;
 @define-color bg #16161e;
 @define-color bg_highlight #292e42;
-@define-color terminal_black #414868;
+@define-color black #414868;
 @define-color fg #c0caf5;
 @define-color fg_dark #a9b1d6;
 @define-color fg_gutter #3b4261;
@@ -35,32 +35,44 @@
 }
 
 window#waybar {
-	border-radius: 8px;
-	background: @bg;
-	padding: 4px 8px 4px 8px;
-}
-
-widget {
-	padding: 0px;
-	margin: 0px;
-	color: @fg;
-	/* background-color: @bg; */
+	background: transparent;
 }
 
 #workspaces button {
 	color: @fg_dark;
+	background: @bg;
+	padding: 2px 8px;
+	margin: 0px 4px; 
+	border-radius: 12px;
 }
 #workspaces button.active {
 	color: @red;
+	padding: 2px 12px;
 }
-
 
 #window {
-	color: @fg_dark;
+	color: @bg;
 }
 
+#tray, #pulseaudio, #network, #backlight, #battery, #clock {
+	background: @bg;
+	padding: 2px 8px;
+	border-radius: 12px;
+}
+
+#backlight {
+	color: @yellow;
+}
+#pulseaudio {
+	color: @green;
+}
+#network {
+	color: @red;
+}
 
 #battery {
-	color: @fg;
-	padding: 0px;
+	color: @blue;
+}
+#clock {
+	color: @purple;
 }

@@ -1,5 +1,6 @@
 {
-    "height": 24,
+	"layer": "top",
+    "height": 28,
 	// "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
 	"margin-left": 8,
@@ -7,14 +8,16 @@
 	"margin-top": 8,
     "modules-left": ["wlr/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "clock", "tray"],
+    "modules-right": ["tray", "pulseaudio", "backlight", "network", "battery", "clock"],
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+        "spacing": 4
     },
     "backlight": {
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "{icon}",
+        "format-alt": "{percent}%",
+        // "format-icons": ["", "", "", "", "", "", "", "", ""]
+		"format-icons": ["", "", "", "", "", "", ""]
     },
     "battery": {
         "states": {
@@ -22,36 +25,32 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "network": {
-        "format-wifi": " {signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": " 直 No IP",
-        "format-disconnected": "睊",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format": "{icon}",
+        "format-charging": "{icon} ",
+        "format-plugged": "{icon} ",
+        "format-alt": "{capacity}%",
+        // "format-icons": ["", "", "", "", ""]
+		"format-icons": ["", "", "", "", "", "", "", "", "", ""]
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": "",
+        "format": "{icon}",
+        "format-alt": "{volume}%",
+        "format-muted": "ﱝ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+			"default": ["", "", ""]
+		},
     },
+	"network": {
+        "format-wifi": "{icon}",
+        "format-ethernet": "{icon}",
+        "format-linked": " 直 No IP",
+        "format-disconnected": "{icon}",
+        "format-alt": "{ipaddr}/{cidr}",
+		"format-icons": {
+			"wifi": "",
+			"ethernet": "",
+			"disconnected": "睊"
+		}
+    },
+
 }
