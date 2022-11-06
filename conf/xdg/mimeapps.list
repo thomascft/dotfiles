@@ -1,0 +1,12 @@
+[Added Associations]
+image/png=brave-browser.desktop;feh.desktop;
+image/jpeg=feh.desktop;
+text/x-copying=userapp-wezterm start neovim-I34LR1.desktop;
+x-scheme-handler/http=brave-browser.desktop;
+x-scheme-handler/https=brave-browser.desktop;
+
+[Default Applications]
+text/x-copying=userapp-wezterm start neovim %f-A2PPR1.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+

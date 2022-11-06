@@ -35,14 +35,16 @@
 }
 
 window#waybar {
-	background: transparent;
+	background-color: rgba(26,27,38, 0.5);
+	/* border: 4px solid @fg; */
+	/* border-radius: 12px; */
 }
 
 #workspaces button {
 	color: @fg_dark;
 	background: @bg;
 	padding: 2px 8px;
-	margin: 0px 4px; 
+	margin: 4px; 
 	border-radius: 12px;
 }
 #workspaces button.active {
@@ -51,12 +53,13 @@ window#waybar {
 }
 
 #window {
-	color: @bg;
+	color: @fg;
 }
 
 #tray, #pulseaudio, #network, #backlight, #battery, #clock {
 	background: @bg;
 	padding: 2px 8px;
+	margin: 4px;
 	border-radius: 12px;
 }
 
