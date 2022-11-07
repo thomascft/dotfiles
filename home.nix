@@ -24,11 +24,21 @@
   };
 
   # Add stuff for your user as you see fit:
-  programs.neovim.enable = true;
+  # programs.neovim.enable = true;
+  xdg.configFile."hypr/hyprland.conf".source = ./conf/hyprland.conf;
+  programs = {
+    ccache.enable = true;
+	neovim.enable = true;
+    hyprland = {
+      enable = true;
+	  xdg.configFile."hypr/hyprland.conf".source = ./conf/hyprland.conf;
+    };
+  };
   home.packages = with pkgs; [ 
     #steam
     wezterm
 
+	wofi
 	waybar
 	wlogout
 	swaylock-effects
