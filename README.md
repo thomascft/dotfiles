@@ -5,7 +5,7 @@
 It's not super organized, but feel free to take a look. I've been daily driving these for just over a year now.
 
 ## Screenshots
-![preview](https://raw.githubusercontent.com/thomascft/dotfiles/master/preview.png)
+![preview](https://raw.githubusercontent.com/thomascft/dotfiles/nixos/preview.png)
 
 ## Featured
 - [Hyprland](https://github.com/hyprwm/Hyprland)
