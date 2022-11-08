@@ -10,7 +10,7 @@
   };
 
   networking = {
-    hostName = "thonkpad"
+    hostName = "thonkpad";
 	networkmanager.enable = true;
   };
 
@@ -26,7 +26,7 @@
 	  enable = true;
 	  wireplumber.enable = true;
 	  pulse.enable = true;
-	}
+	};
   };
 
   hardware = {
