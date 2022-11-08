@@ -12,22 +12,24 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, hyprland, ... }: {
-    nixosConfigurations.nixos = {
-      nixpkgs.lib.nixosSystem {
+  outputs = { nixpkgs, home-manager, hyprland, ... }@inputs: {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs;};
+        # specialArgs = { inherit inputs;};
         modules = [
-          ./configuration.nix
+          ./system/configuration.nix
         ];
       };
+    homeConfigurations = {
+      "thomas@nixos" = home-manager.lib.homeManagerConfiguration {
+        #extraSpecialArgs = { inherit inputs;};
+	pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [ 
+	./home.nix
+        hyprland.homeManagerModules.default
+        { wayland.windowManager.hyprland.enable = true; }
+	];
+      };
     };
-	homeConfigurations = {
-	
-	  "thomas@nixos" = {
-        extraSpecialArgs = { inherit inputs;};
-        modules = [ ./home.nix ];
-	  };
-	};
   };
 }

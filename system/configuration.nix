@@ -5,12 +5,12 @@
 
   boot.loader = {
     systemd-boot.enable = true;
-	efi.canTouchEfiVariables = true;
-
+    efi.canTouchEfiVariables = true;
+    efi.efiSysMountPoint = "/boot/efi";
   };
 
   networking = {
-    hostName = "thonkpad";
+    hostName = "nixos";
 	networkmanager.enable = true;
   };
 
@@ -41,7 +41,7 @@
 
     systemPackages = with pkgs; [
       git
-	  nvim
+      neovim
       w3m
     ];
   };
