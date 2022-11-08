@@ -8,14 +8,22 @@
     packages = [
       pkgs.wofi
       pkgs.wezterm
+      pkgs.gh
+      pkgs.playerctl
     ];
   };
 
-  xdg.configFile."hypr/hyprland.conf".source = ./conf/hyprland.conf;
   programs = {
     home-manager.enable = true;
-    git.enable = true;
-    wezterm.enable = true;
+    git = {
+      enable = true;
+      userName = "Thomas Croft";
+      userEmail = "103956335+thomascft@users.noreply.github.com";
+    };
+    wezterm = {
+      enable = true;
+      extraConfig = builtins.readFile(./conf/wezterm/wezterm.lua);
+    };
     waybar.enable = true;
     firefox.enable = true;
   };
