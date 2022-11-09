@@ -1,5 +1,14 @@
 {inputs, lib, config, pkgs, ...}: {
   imports = [
+    inputs.hyprland.homeManagerModules.default { 
+	wayland.windowManager.hyprland = {
+	enable = true;
+	extraConfig = builtins.readFile ./conf/hyprland.conf;
+      };
+    }
+    inputs.webcord.homeManagerModules.default {
+        programs.webcord.enable = true;
+    }
   ];
 
   home = {
@@ -10,8 +19,18 @@
       pkgs.wezterm
       pkgs.gh
       pkgs.playerctl
+
+      inputs.swww.packages.x86_64-linux.swww
+
+      (pkgs.nerdfonts.override { fonts = [ "Iosevka" "JetBrainsMono"]; } )
     ];
   };
+
+  xdg.configFile = {
+    "waybar/config".source = ./conf/waybar/config;
+  };
+
+  fonts.fontconfig.enable = true;
 
   programs = {
     home-manager.enable = true;
@@ -24,7 +43,11 @@
       enable = true;
       extraConfig = builtins.readFile(./conf/wezterm/wezterm.lua);
     };
-    waybar.enable = true;
+    waybar = {
+      enable = true;
+      # settings = [ builtins.readFile(./conf/waybar/config) ];
+      style = builtins.readFile(./conf/waybar/style.css);
+    };
     firefox.enable = true;
   };
 
