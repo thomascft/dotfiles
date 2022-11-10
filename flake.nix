@@ -9,12 +9,15 @@
     
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
+
+    webcord.url = "github:fufexan/webcord-flake";
+
+    swww.url = "github:thomascft/swww";
   };
 
-  outputs = {self, nixpkgs, home-manager, hyprland, ...}@inputs: {
+  outputs = {self, nixpkgs, home-manager, hyprland, webcord, swww, ...} @ inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	  system = "x86_64-linux";
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
 	  specialArgs = { inherit inputs; };
 	  modules = [
 	    ./configuration.nix
@@ -25,13 +28,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = { inherit inputs; };
 	modules = [ 
-          hyprland.homeManagerModules.default
-	  { 
-	    wayland.windowManager.hyprland = {
-	      enable = true;
-	      extraConfig = builtins.readFile ./conf/hyprland.conf;
-	    };
-	  }
+          
 	  ./home.nix
 	];
       };
