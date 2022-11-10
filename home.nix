@@ -11,20 +11,38 @@
     }
   ];
 
+  nixpkgs.config = {
+  allowUnfree = true;
+  allowUnfreePredicate = (_: true);
+  };
+
   home = {
     username = "thomas";
     homeDirectory = "/home/thomas";
     packages = [
-      pkgs.wofi
+      inputs.swww.packages.x86_64-linux.default
+      pkgs.rofi-wayland
       pkgs.wezterm
+      pkgs.wlogout
+      pkgs.swaylock-effects
+
       pkgs.gh
+
       pkgs.playerctl
+      pkgs.spotify
+      pkgs.brightnessctl
 
-      inputs.swww.packages.x86_64-linux.swww
+      pkgs.grapejuice
+      pkgs.steam
+      pkgs.lutris
 
-      (pkgs.nerdfonts.override { fonts = [ "Iosevka" "JetBrainsMono"]; } )
+
+      pkgs.iosevka
+      (pkgs.nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; } )
     ];
   };
+
+  
 
   xdg.configFile = {
     "waybar/config".source = ./conf/waybar/config;
@@ -46,6 +64,7 @@
     };
     waybar = {
       enable = true;
+      package = inputs.hyprland.packages.x86_64-linux.waybar-hyprland;
       # settings = [ builtins.readFile(./conf/waybar/config) ];
       style = builtins.readFile(./conf/waybar/style.css);
     };
