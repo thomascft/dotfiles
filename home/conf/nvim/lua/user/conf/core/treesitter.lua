@@ -5,7 +5,7 @@ if not ok then
 end
 
 local settings = {
-	ensure_installed = { "lua", "rust", "css", "yaml" },
+	ensure_installed = { "lua", "nix", "rust", "css", "yaml" },
 	
 	auto_install = true,
 }
