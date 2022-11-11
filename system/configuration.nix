@@ -16,6 +16,7 @@
 
   users.users.thomas = {
     isNormalUser = true;
+	shell = pkgs.zsh;
 	extraGroups = ["wheel"];
   };
 

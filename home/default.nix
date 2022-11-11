@@ -1,9 +1,9 @@
 {inputs, lib, config, pkgs, ...}: {
   imports = [
     inputs.hyprland.homeManagerModules.default { 
-	wayland.windowManager.hyprland = {
-	enable = true;
-	extraConfig = builtins.readFile ./conf/hyprland.conf;
+	  wayland.windowManager.hyprland = {
+	    enable = true;
+	    extraConfig = builtins.readFile ./conf/hyprland.conf;
       };
     }
     inputs.webcord.homeManagerModules.default {
@@ -25,6 +25,8 @@
       pkgs.wezterm
       pkgs.wlogout
       pkgs.swaylock-effects
+
+	  pkgs.gcc # Needed for Treesitter
 
       pkgs.gh
 
@@ -70,6 +72,21 @@
       enable = true;
       extraConfig = builtins.readFile(./conf/wezterm/wezterm.lua);
     };
+    zsh = {
+	  enable = true;
+	  # autosuggestions.enable = true;
+	  enableCompletion = true;
+	  initExtra = ''
+        PS1=$'\n'"%S%n@%m%s %1~"$'\n\n'"  %S%#%s "
+        bindkey -e
+        bindkey "^[[1;5C" forward-word
+        bindkey "^[[1;5D" backward-word
+	  '';
+      # zplug = {
+	  #  enable = true;
+	  #};
+
+	};
     waybar = {
       enable = true;
       package = inputs.hyprland.packages.x86_64-linux.waybar-hyprland;
