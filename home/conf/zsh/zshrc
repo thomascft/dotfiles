@@ -1,5 +1,0 @@
-PS1=$'\n'"%S%n@%m%s %1~"$'\n\n'"  %S%#%s "
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-

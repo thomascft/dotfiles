@@ -5,6 +5,9 @@ if not ok then
 end
 
 local settings = {
+
+	highlight = { enable = true },
+
 	ensure_installed = { "lua", "nix", "rust", "css", "yaml" },
 	
 	auto_install = true,
