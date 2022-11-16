@@ -17,14 +17,12 @@
 
   outputs = {self, nixpkgs, home-manager, hyprland, webcord, swww, ...} @ inputs: {
     nixosConfigurations = import ./hosts inputs;
-	homeConfigurations = {
-      "thomas@nixos"= home-manager.lib.homeManagerConfiguration {
+	homeConfigurations.thomas = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = { inherit inputs; };
 	    modules = [ 
 	      ./home
 	    ];
       };
-    };
   };
 }
