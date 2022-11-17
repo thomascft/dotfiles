@@ -18,6 +18,8 @@
 	shell = pkgs.zsh;
 	extraGroups = ["wheel"];
   };
+  
+  programs.ssh.startAgent = true;
 
   nixpkgs.config.allowUnfree = true; 
  
