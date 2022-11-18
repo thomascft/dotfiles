@@ -8,18 +8,20 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/64719b62-8e9b-46a7-8b19-2fba9f64d49b";
+    { device = "/dev/disk/by-uuid/8efbb96a-411f-41f9-b76e-c56bdf81a17e";
       fsType = "ext4";
     };
 
-  fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/0998-BF44";
+  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/812a9b65-a716-4a73-a3d7-aef30b537a62";
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/B863-79EE";
       fsType = "vfat";
     };
 
@@ -33,6 +35,5 @@
   # networking.interfaces.enp0s25.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp3s0.useDHCP = lib.mkDefault true;
 
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
