@@ -3,10 +3,14 @@
 {
   imports = [ ];
 
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    efi.efiSysMountPoint = "/boot/efi";
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      efi.efiSysMountPoint = "/boot";
+    };
+	plymouth.enable = true;
+	initrd.systemd.enable = true;
   };
 
   networking = {
