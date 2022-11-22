@@ -38,6 +38,7 @@
 	  wireplumber.enable = true;
 	  pulse.enable = true;
     };
+	tlp.enable = true;
     dbus.enable = true;
   };
 
