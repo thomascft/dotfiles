@@ -5,6 +5,11 @@
     inputs.swww.packages.x86_64-linux.default
     pkgs.wlogout
     pkgs.swaylock-effects
+
+	pkgs.wl-clipboard
+
+	pkgs.wayshot
+	pkgs.slurp
   ];
 
   wayland.windowManager.hyprland = {
