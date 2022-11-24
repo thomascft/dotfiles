@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }: {
 
   home.packages = [
-	pkgs.gcc # Needed for Treesitter
     pkgs.gh
   ];
 
