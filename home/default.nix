@@ -1,9 +1,9 @@
 {inputs, lib, config, pkgs, ...}: {
   imports = [
     inputs.hyprland.homeManagerModules.default
-    inputs.webcord.homeManagerModules.default {
-        programs.webcord.enable = true;
-    }
+    #inputs.webcord.homeManagerModules.default {
+    #    programs.webcord.enable = true;
+    #}
 	./shell
 	./hyprland
 	./neovim

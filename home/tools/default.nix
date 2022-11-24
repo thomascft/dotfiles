@@ -2,6 +2,7 @@
 
   home.packages = [
     pkgs.gh
+	(pkgs.discord.override { withOpenASAR = true; } )
   ];
 
   programs = {

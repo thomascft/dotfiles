@@ -23,7 +23,10 @@
   };
   programs.waybar = {
     enable = true;
-    package = inputs.hyprland.packages.x86_64-linux.waybar-hyprland;
+    # package = inputs.hyprland.packages.x86_64-linux.waybar-hyprland;
+	package = pkgs.waybar.overrideAttrs (oldAttrs: {
+      mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
+	});
     # settings = [ builtins.readFile(./waybar/config) ];
     style = builtins.readFile(./waybar/style.css);
   };

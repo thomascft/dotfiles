@@ -8,14 +8,13 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
-    webcord.url = "github:fufexan/webcord-flake";
+    # webcord.url = "github:fufexan/webcord-flake";
 
     swww.url = "github:thomascft/swww";
   };
 
-  outputs = {self, nixpkgs, home-manager, hyprland, webcord, swww, ...} @ inputs: {
+  outputs = {self, nixpkgs, home-manager, hyprland, swww, ...} @ inputs: {
     nixosConfigurations = import ./hosts inputs;
 	homeConfigurations.thomas = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
