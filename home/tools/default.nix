@@ -3,6 +3,7 @@
   home.packages = [
     pkgs.gh
 	(pkgs.discord.override { withOpenASAR = true; } )
+	pkgs.signal-desktop
   ];
 
   programs = {

@@ -10,6 +10,7 @@
 	./wezterm
 	./fonts
 	./tools
+	./multimedia
   ];
 
   nixpkgs.config = {
