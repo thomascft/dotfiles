@@ -6,7 +6,7 @@
     #}
 	./shell
 	./hyprland
-	./neovim
+	./editors/neovim
 	./wezterm
 	./fonts
 	./tools
