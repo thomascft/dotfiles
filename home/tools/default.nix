@@ -4,6 +4,7 @@
     pkgs.gh
 	(pkgs.discord.override { withOpenASAR = true; } )
 	pkgs.signal-desktop
+	pkgs.xdg-utils
   ];
 
   programs = {
