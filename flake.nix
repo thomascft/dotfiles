@@ -9,8 +9,6 @@
     
     hyprland.url = "github:hyprwm/Hyprland";
 
-    # webcord.url = "github:fufexan/webcord-flake";
-
     swww.url = "github:thomascft/swww";
   };
 
