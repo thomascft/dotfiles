@@ -2,8 +2,7 @@
 
   home.packages = [
     pkgs.gh
-	(pkgs.discord.override { withOpenASAR = true; } )
-	pkgs.signal-desktop
+	pkgs.xdg-utils
   ];
 
   programs = {
@@ -13,15 +12,5 @@
       userEmail = "103956335+thomascft@users.noreply.github.com";
       lfs.enable = true;
     };
-
-	chromium = {
-	  enable = true;
-      package = pkgs.brave;
-	  extensions = [
-	    "enpfonmmpgoinjpglildebkaphbhndek" # Tokyo Night Theme
-	    "nngceckbapebfimnlniiiahkandclblb" # Bitwarden
-		"kekjfbackdeiabghhcdklcdoekaanoel" # MAL-Sync
-		];
-	};
   };
 }

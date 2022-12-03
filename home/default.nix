@@ -1,18 +1,19 @@
 {inputs, lib, config, pkgs, ...}: {
   imports = [
     inputs.hyprland.homeManagerModules.default
-    #inputs.webcord.homeManagerModules.default {
-    #    programs.webcord.enable = true;
-    #}
 	./shell
 	./hyprland
 	./editors/neovim
 	./wezterm
 	./fonts
 	./tools
-	./multimedia
-  ];
+	./programs/brave
+	./programs/discord
+	./programs/signal
+	./programs/gimp
+	./programs/inkscape
 
+  ];
   nixpkgs.config = {
     allowUnfree = true;
     allowUnfreePredicate = (_: true);
@@ -22,10 +23,7 @@
     username = "thomas";
     homeDirectory = "/home/thomas";
     packages = [
-
-
       pkgs.playerctl
-      pkgs.spotify
       pkgs.brightnessctl
 
       pkgs.grapejuice
