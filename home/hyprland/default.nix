@@ -2,11 +2,11 @@
 
   home.packages = [
     pkgs.rofi-wayland
-    inputs.swww.packages.x86_64-linux.default
     pkgs.wlogout
     pkgs.swaylock-effects
 
 	pkgs.wl-clipboard
+    inputs.self.packages.x86_64-linux.swww
 
 	pkgs.wayshot
 	pkgs.slurp

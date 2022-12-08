@@ -11,10 +11,11 @@
 
     # webcord.url = "github:fufexan/webcord-flake";
 
-    swww.url = "github:thomascft/swww";
   };
 
-  outputs = {self, nixpkgs, home-manager, hyprland, swww, ...} @ inputs: {
+  outputs = {self, nixpkgs, home-manager, hyprland, swww, ...} @ inputs: let
+    pkgs = nixpkgs.legacyPackages.x86_64-linux;
+  in {
     nixosConfigurations = import ./hosts inputs;
 	homeConfigurations.thomas = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -23,5 +24,8 @@
 	      ./home
 	    ];
       };
+    packages.x86_64-linux = {
+      swww = pkgs.callPackage ./pkgs/swww.nix {};
+    };
   };
 }
