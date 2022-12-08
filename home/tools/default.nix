@@ -6,7 +6,7 @@
 }: {
   home.packages = [
     pkgs.gh
-	pkgs.xdg-utils
+    pkgs.xdg-utils
   ];
 
   programs = {
