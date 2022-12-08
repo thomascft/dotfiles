@@ -1,12 +1,16 @@
-{ config, lib, pkgs, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   home.packages = [
     pkgs.gh
-	pkgs.xdg-utils
+    pkgs.xdg-utils
   ];
 
   programs = {
-	git = {
+    git = {
       enable = true;
       userName = "Thomas Croft";
       userEmail = "103956335+thomascft@users.noreply.github.com";

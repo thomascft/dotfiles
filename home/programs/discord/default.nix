@@ -1,5 +1,10 @@
-{ pkgs, lib, config, ... }: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   home.packages = [
-    ( pkgs.discord.override { withOpenASAR = true; } )
+    (pkgs.discord.override {withOpenASAR = true;})
   ];
 }

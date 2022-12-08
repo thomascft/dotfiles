@@ -1,22 +1,26 @@
-{inputs, lib, config, pkgs, ...}: {
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
-    inputs.hyprland.homeManagerModules.default
-	./shell
-	./hyprland
-	./editors/neovim
-	./wezterm
-	./fonts
-	./tools
-	./programs/brave
-	./programs/discord
-	./programs/signal
-	./programs/gimp
-	./programs/inkscape
-
+    ./shell
+    ./hyprland
+    ./editors/neovim
+    ./wezterm
+    ./fonts
+    ./tools
+    ./programs/brave
+    ./programs/discord
+    ./programs/signal
+    ./programs/gimp
+    ./programs/inkscape
   ];
   nixpkgs.config = {
     allowUnfree = true;
-    allowUnfreePredicate = (_: true);
+    allowUnfreePredicate = _: true;
   };
 
   home = {
