@@ -6,7 +6,9 @@
 }: {
   home.packages = [
     pkgs.gh
-    pkgs.xdg-utils
+	(pkgs.discord.override { withOpenASAR = true; } )
+	pkgs.signal-desktop
+	pkgs.xdg-utils
   ];
 
   programs = {
