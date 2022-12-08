@@ -17,6 +17,7 @@
     ./programs/signal
     ./programs/gimp
     ./programs/inkscape
+	./programs/spotify
   ];
   nixpkgs.config = {
     allowUnfree = true;
