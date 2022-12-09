@@ -20,15 +20,10 @@
   } @ inputs: let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in {
-    formatter.x86_64-linux = pkgs.alejandra;
-    nixosConfigurations = import ./hosts inputs;
-    homeConfigurations.thomas = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      extraSpecialArgs = {inherit inputs;};
-      modules = [
-        ./home
-      ];
-    };
+	imports = [
+	  ./hosts
+	]
+	formatter.x86_64-linux = pkgs.alejandra;
     packages.x86_64-linux = {
       swww = pkgs.callPackage ./pkgs/swww.nix {};
     };
