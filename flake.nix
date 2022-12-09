@@ -42,6 +42,7 @@
 	    ./hosts/thonkpad
 	  ];
     };
+
     packages.x86_64-linux = {
       swww = pkgs.callPackage ./pkgs/swww.nix {};
     };
