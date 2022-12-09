@@ -5,5 +5,5 @@
       {networking.hostName = "acer";}
       ./hardware-configuration.nix
       ];
-    }
+    };
 }
