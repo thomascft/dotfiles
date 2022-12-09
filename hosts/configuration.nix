@@ -10,7 +10,7 @@
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      efi.efiSysMountPoint = "/boot";
+      efi.efiSysMountPoint = "/boot/efi";
     };
     plymouth.enable = true;
     initrd.systemd.enable = true;
@@ -55,7 +55,11 @@
 
   hardware = {
     bluetooth.enable = true;
-    opengl.enable = true;
+    opengl = {
+	  enable = true;
+	  driSupport = true;
+	  driSupport32Bit = true;
+	};
     steam-hardware.enable = true;
   };
 
