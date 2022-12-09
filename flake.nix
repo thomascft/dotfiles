@@ -8,7 +8,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland.url = "github:hyprwm/Hyprland";
-
   };
 
   outputs = {
@@ -20,17 +19,32 @@
   } @ inputs: let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in {
-    formatter.x86_64-linux = pkgs.alejandra;
-    nixosConfigurations = import ./hosts inputs;
-    homeConfigurations.thomas = home-manager.lib.homeManagerConfiguration {
+	homeConfigurations = {
+	  "thomas@acer" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       extraSpecialArgs = {inherit inputs;};
       modules = [
         ./home
       ];
+	  };
+	  "thomas@thonkpad" = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      extraSpecialArgs = {inherit inputs;};
+      modules = [
+        ./home
+      ];
+	  };
+
+    };
+    nixosConfigurations = {
+      modules = [
+	    ./hosts/acer
+	    ./hosts/thonkpad
+	  ];
     };
     packages.x86_64-linux = {
       swww = pkgs.callPackage ./pkgs/swww.nix {};
     };
+	formatter.x86_64-linux = pkgs.alejandra;
   };
 }
