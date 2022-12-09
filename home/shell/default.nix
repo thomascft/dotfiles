@@ -19,6 +19,12 @@
         systemd-inhibit --what handle-power-key Hyprland
       fi
     '';
+	zplug = {
+	  enable = true;
+	  plugins = [
+        {name = "zsh-users/zsh-syntax-highlighting"; }
+	  ];
+	};
   };
   programs.fzf = {
     enable = true;
