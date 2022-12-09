@@ -1,15 +1,24 @@
-{inputs, config, lib, pkgs, ...}: {
+{
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    inputs.hyprland.homeManagerModules.default
+  ];
 
   home.packages = [
     pkgs.rofi-wayland
-    inputs.swww.packages.x86_64-linux.default
     pkgs.wlogout
     pkgs.swaylock-effects
+    pkgs.wl-clipboard
 
-	pkgs.wl-clipboard
+    inputs.self.packages.x86_64-linux.swww
 
-	pkgs.wayshot
-	pkgs.slurp
+    pkgs.wayshot
+    pkgs.slurp
   ];
 
   wayland.windowManager.hyprland = {
@@ -17,20 +26,21 @@
     extraConfig = builtins.readFile ./hyprland.conf;
   };
   xdg.configFile = {
-    "waybar/config".source = ./waybar/config;
-	"swaylock/config".source = ./swaylock;
-	"mako/config".source = ./mako;
+    "waybar" = {
+      source = ./waybar;
+      recursive = true;
+    };
+    "swaylock/config".source = ./swaylock;
+    "mako/config".source = ./mako;
   };
   programs.waybar = {
     enable = true;
-    # package = inputs.hyprland.packages.x86_64-linux.waybar-hyprland;
-	package = pkgs.waybar.overrideAttrs (oldAttrs: {
+    package = pkgs.waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
-	});
-    # settings = [ builtins.readFile(./waybar/config) ];
-    style = builtins.readFile(./waybar/style.css);
+    });
+    style = builtins.readFile ./waybar/style.css;
   };
   programs.mako = {
-	enable = true;
+    enable = true;
   };
 }

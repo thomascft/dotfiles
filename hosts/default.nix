@@ -1,9 +1,13 @@
-{ nixpkgs, self, ... }: {
+{
+  nixpkgs,
+  self,
+  ...
+}: {
   acer = nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     modules = [
       {networking.hostName = "acer";}
-	  ./configuration.nix
+      ./configuration.nix
       ./acer/hardware-configuration.nix
     ];
     # specialArgs = {inherit inputs;};
@@ -12,7 +16,7 @@
     system = "x86_64-linux";
     modules = [
       {networking.hostName = "thonkpad";}
-	  ./configuration.nix
+      ./configuration.nix
       ./thonkpad/hardware-configuration.nix
     ];
     # specialArgs = {inherit inputs;};

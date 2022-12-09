@@ -1,7 +1,10 @@
-{config,lib, pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   home.packages = with pkgs; [
     gimp
-	inkscape
-    mpv
   ];
 }

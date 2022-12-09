@@ -1,28 +1,34 @@
-{inputs, lib, config, pkgs, ...}: {
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
-    inputs.hyprland.homeManagerModules.default
-	./shell
-	./hyprland
-	./editors/neovim
-	./wezterm
-	./fonts
-	./tools
-	./multimedia
+    ./shell
+    ./hyprland
+    ./editors/neovim
+    ./wezterm
+    ./fonts
+    ./tools
+    ./programs/brave
+    ./programs/discord
+    ./programs/signal
+    ./programs/gimp
+    ./programs/inkscape
+	./programs/spotify
   ];
-
   nixpkgs.config = {
     allowUnfree = true;
-    allowUnfreePredicate = (_: true);
+    allowUnfreePredicate = _: true;
   };
 
   home = {
     username = "thomas";
     homeDirectory = "/home/thomas";
     packages = [
-
-
       pkgs.playerctl
-      pkgs.spotify
       pkgs.brightnessctl
 
       pkgs.grapejuice
