@@ -40,7 +40,7 @@ local plugins = { {
 	{
 		-- Themes
 		{ "folke/tokyonight.nvim" },
-		{ "~/Projects/horizon.nvim" },
+		{ "articblush/nvim" },
 		{ "tiagovla/tokyodark.nvim" },
 		{ "catppuccin/nvim", as = "catppuccin" },
 		-- Other Stuff

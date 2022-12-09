@@ -7,29 +7,36 @@ return {
 	window_background_opacity = 1,
 	hide_tab_bar_if_only_one_tab = true,
 	colors = {
-		tab_bar = {
-			active_tab = {
-				bg_color = "#11121D",
-				fg_color = "#A0A8CD"
-			},
-			inactive_tab = {
-				bg_color = "#212234",
-				fg_color = "#A0A8CD"
-			},
-			inactive_tab_hover = {
-				bg_color = "#1A1B2A",
-				fg_color = "#A0A8CD"
-			},
-			new_tab = {
-				bg_color = "#212234",
-				fg_color = "#A0A8CD"
-			},
-			new_tab_hover = {
-				bg_color = "#11121D",
-				fg_color = "#A0A8CD"
-			},
-			inactive_tab_edge = "#212234"
-		}
+		foreground = '#cce9ea',
+		background = '#040c16',
+
+		cursor_bg = '#d9d7d6',
+        	cursor_border = '#d9d7d6',
+
+        	selection_fg = '#040c16',
+        	selection_bg = '#cce9ea',
+
+        	ansi = {
+               		'#323949',
+                	'#E6676B',
+                	'#A2E4B8',
+                	'#e2d06a',
+               		'#92bbed',
+                	'#ecc6e8',
+                	'#80ffff',
+                	'#cfebec',
+        	},
+
+        	brights = {
+                	'#3d3e51',
+               		'#FF7377',
+                	'#AAF0C1',
+                	'#eadd94',
+                	'#bdd6f4',
+                	'#f9ecf7',
+                	'#b3ffff',
+                	'#edf7f8',
+        	},
 	},
 	window_frame = {
 		--font = wezterm.font { family = 'Iosevka Bold' },
