@@ -36,12 +36,7 @@
 	  };
 
     };
-    nixosConfigurations = {
-      modules = [
-	    ./hosts/acer
-	    ./hosts/thonkpad
-	  ];
-    };
+    nixosConfigurations = import ./hosts inputs;
 
     packages.x86_64-linux = {
       swww = pkgs.callPackage ./pkgs/swww.nix {};
