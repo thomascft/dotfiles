@@ -7,7 +7,7 @@
 }: {
   imports = [
     ./shell
-    ./hyprland
+    ./wayland/hyprland
     ./editors/neovim
     ./wezterm
     ./fonts
