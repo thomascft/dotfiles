@@ -6,8 +6,12 @@
     });
 	systemd.enable = true;
   };
-  xdg.configFile.waybar = {
-	source = ./conf;
-	recursive = true;
+  xdg.configFile = {
+    "waybar/config".source = ./config.json;
+	"waybar/style.css".source = ./style.css;
+	"waybar/assets" = {
+	  source = ./assets;
+	  recursive = true;
+    };
   };
 }
