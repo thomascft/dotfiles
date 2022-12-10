@@ -12,6 +12,7 @@
 	../mako
 	../swaylock
 	../wlogout
+	../wofi
   ];
 
   home.packages = [
