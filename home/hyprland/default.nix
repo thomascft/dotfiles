@@ -26,10 +26,11 @@
     extraConfig = builtins.readFile ./hyprland.conf;
   };
   xdg.configFile = {
-    "waybar" = {
-      source = ./waybar;
-      recursive = true;
-    };
+    "waybar/config".source = ./waybar/config.json;
+	"waybar/assets" = {
+	  source = ./waybar/assets;
+	  recursive = true;
+	};
     "swaylock/config".source = ./swaylock;
     "mako/config".source = ./mako;
   };
