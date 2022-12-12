@@ -8,7 +8,8 @@
   home.packages = [
     inputs.self.packages.x86_64-linux.swww
   ];
-  systemd.user.services.swww = {
+  systemd.user.services = {
+    swww-daemon = {
     Unit = {
       Description = "swww, A salution to your Wayland Wallpaper Woes";
       Documentation = "https://github.com/Hourus645/swww";
@@ -24,6 +25,25 @@
     };
 	Install = {
         WantedBy = [ "graphical-session.target" ];
+		Also = ["swww-wallpaper.service"];
     };
+    };
+	swww-wallpaper = {
+      Unit = {
+        Description = "Default wallpaper for swww";
+		PartOf = ["graphical-session.target"];
+		After = ["swww-daemon.service"];
+	  };
+
+	  Service = {
+	    ExecStart = "${inputs.self.packages.x86_64-linux.swww}/bin/swww img /home/thomas/.dotfiles/wallpaper.png";
+	    ExecReload = "${inputs.self.packages.x86_64-linux.swww}/bin/swww img /home/thomas/.dotfiles/wallpaper.png";
+		Restart = "on-failure";
+        KillMode = "mixed";
+	  };
+	  Install = {
+	    WantedBy = ["swww-daemon.service"];
+	  };
+	};
   };
 }
