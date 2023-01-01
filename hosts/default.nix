@@ -1,18 +1,27 @@
-{nixpkgs, ...}:{
-  acer =   nixpkgs.lib.nixosSystem {
+{inputs, ...}:{
+  flake.nixosConfigurations = {
+acer = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     modules = [
-      {networking.hostName = "acer";}
-      ./hardware-configuration.nix
-	  ./configuration.nix
+      {
+	    networking.hostName = "acer";
+		system.stateVersion = "22.05";
+	  }
+      ./acer
+	  ../modules/shared.nix
       ];
     };
-  thonkpad =   nixpkgs.lib.nixosSystem {
+  thonkpad = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     modules = [
-      {networking.hostName = "thonkpad";}
+      {
+	    networking.hostName = "thonkpad";
+		system.stateVersion = "22.05";
+	  }
 	  ./thonkpad
-	  ./configuration.nix
+	  ../modules/shared.nix
       ];
     };
-}
+
+  };
+  }

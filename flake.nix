@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -12,35 +14,42 @@
 
   outputs = {
     self,
+    flake-parts,
     nixpkgs,
     home-manager,
     hyprland,
     ...
-  } @ inputs: let
-    pkgs = nixpkgs.legacyPackages.x86_64-linux;
-  in {
-	homeConfigurations = {
-	  "thomas@acer" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      extraSpecialArgs = {inherit inputs;};
-      modules = [
-        ./home
-      ];
-	  };
-	  "thomas@thonkpad" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      extraSpecialArgs = {inherit inputs;};
-      modules = [
-        ./home
-      ];
-	  };
+  } @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["x86_64-linux"];
 
-    };
-    nixosConfigurations = import ./hosts inputs;
+      imports = [
+	    ./hosts
+	  ];
 
-    packages.x86_64-linux = {
-      swww = pkgs.callPackage ./pkgs/swww.nix {};
+      perSystem = {pkgs, ...}: {
+        packages = {
+          swww = pkgs.callPackage ./pkgs/swww.nix {};
+        };
+        formatter = pkgs.alejandra;
+      };
+      flake = {
+        homeConfigurations = {
+          "thomas@acer" = home-manager.lib.homeManagerConfiguration {
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            extraSpecialArgs = {inherit inputs;};
+            modules = [
+              ./home
+            ];
+          };
+          "thomas@thonkpad" = home-manager.lib.homeManagerConfiguration {
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            extraSpecialArgs = {inherit inputs;};
+            modules = [
+              ./home
+            ];
+          };
+        };
+      };
     };
-	formatter.x86_64-linux = pkgs.alejandra;
-  };
 }
