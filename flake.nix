@@ -13,11 +13,7 @@
   };
 
   outputs = {
-    self,
     flake-parts,
-    nixpkgs,
-    home-manager,
-    hyprland,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -35,15 +31,15 @@
       };
       flake = {
         homeConfigurations = {
-          "thomas@acer" = home-manager.lib.homeManagerConfiguration {
-            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          "thomas@acer" = inputs.home-manager.lib.homeManagerConfiguration {
+            pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
             extraSpecialArgs = {inherit inputs;};
             modules = [
               ./home
             ];
           };
-          "thomas@thonkpad" = home-manager.lib.homeManagerConfiguration {
-            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          "thomas@thonkpad" = inputs.home-manager.lib.homeManagerConfiguration {
+            pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
             extraSpecialArgs = {inherit inputs;};
             modules = [
               ./home

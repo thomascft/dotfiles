@@ -13,7 +13,8 @@
     wireplumber.enable = true;
     pulse.enable = true;
   };
-  networking.wireless.iwd.enable = true;
+#  networking.wireless.iwd.enable = true;
+  networking.networkmanager.enable = true;
   users.users.thomas = {
     isNormalUser = true;
     shell = pkgs.zsh;
