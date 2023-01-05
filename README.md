@@ -1,29 +1,9 @@
-# Thomas Croft's Dotfiles
-
-### Welcome to my dotfiles repo,
-
-It's not super organized, but feel free to take a look. I've been daily driving these for just over a year now.
-
 ## Screenshots
-![preview](https://raw.githubusercontent.com/thomascft/dotfiles/winter_rice/preview.png)
+![preview](https://raw.githubusercontent.com/thomascft/dotfiles/preview.png)
 
-## Featured
-- [Hyprland](https://github.com/hyprwm/Hyprland)
-- [Wofi](https://hg.sr.ht/~scoopta/wofi)
-- [Waybar](https://github.com/Alexays/Waybar)
-- [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
-- [WezTerm](https://github.com/wez/wezterm)
-- [NeoVim](https://neovim.io)
-- [Zsh](https://www.zsh.org/)
+## About
 
-## Install
-
-### Dependencies
-
-#### Core
-
-`paru -Sy hyprland-git waybar wofi swaync-git wayshot-bin slurp swaylock-color swayidle swww-git`
-
-#### Utils
-
-`paru -S fzf`
+These dotfiles are intended to be used by NixOS and home-manager.
+You'll probably want to look in `home/` to find each program's configuration.
+I've been daily driving NixOS for about two months at the time of writing,
+ so expect there to be major changes as I continue to expand my knowledge of Nix and the surrounding ecosystem.
