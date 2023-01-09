@@ -43,6 +43,9 @@ local plugins = { {
 		{ "articblush/nvim" },
 		{ "tiagovla/tokyodark.nvim" },
 		{ "catppuccin/nvim", as = "catppuccin" },
+
+		{"rktjmp/lush.nvim"}, -- Tool for creating themes
+
 		-- Other Stuff
 		{ "kyazdani42/nvim-web-devicons" },
 		{ "nvim-telescope/telescope-symbols.nvim" },
