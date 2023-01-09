@@ -21,6 +21,7 @@
 
       imports = [
 	    ./hosts
+		./home
 	  ];
 
       perSystem = {pkgs, ...}: {
@@ -28,24 +29,6 @@
           swww = pkgs.callPackage ./pkgs/swww.nix {};
         };
         formatter = pkgs.alejandra;
-      };
-      flake = {
-        homeConfigurations = {
-          "thomas@acer" = inputs.home-manager.lib.homeManagerConfiguration {
-            pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
-            extraSpecialArgs = {inherit inputs;};
-            modules = [
-              ./home
-            ];
-          };
-          "thomas@thonkpad" = inputs.home-manager.lib.homeManagerConfiguration {
-            pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
-            extraSpecialArgs = {inherit inputs;};
-            modules = [
-              ./home
-            ];
-          };
-        };
       };
     };
 }
