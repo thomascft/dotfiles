@@ -6,10 +6,10 @@
   ...
 }: {
   imports = [
-    ../shell
-    ../wayland/hyprland
-    ../editors/neovim
-    ../wezterm
+    ../programs/shell
+    ../programs/wayland/hyprland
+    ../programs/editors/neovim
+    ../programs/wezterm
     ../fonts
     ../tools
     ../programs/brave
