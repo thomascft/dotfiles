@@ -27,16 +27,7 @@ function handle_event {
 }
 
 function create_taglist {
-	echo "
-		(box :orientation \"v\" :class \"workspaces\" :space-evenly \"false\" \
-			(button :class \"$o1 $a1\" :halign \"center\") \
-			(button :class \"$o2 $a2\" :halign \"center\") \
-			(button :class \"$o3 $a3\" :halign \"center\") \
-			(button :class \"$o4 $a4\" :halign \"center\") \
-			(button :class \"$o5 $a5\" :halign \"center\") \
-			(button :class \"$o6 $a6\" :halign \"center\") \
-			(button :class \"$o7 $a7\" :halign \"center\") \
-			(button :class \"$o8 $a8\" :halign \"center\"))"
+	echo "[\"$o1 $a1\", \"$o2 $a2\", \"$o3 $a3\", \"$o4 $a4\", \"$o5 $a5\", \"$o6 $a6\", \"$o7 $a7\", \"$o8 $a8\"]"
 }
 
 for NUM in {0..8}; do

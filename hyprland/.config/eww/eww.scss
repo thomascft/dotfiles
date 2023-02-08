@@ -70,13 +70,12 @@ window {
 	margin: 2px 0px;
 	background: $surface0;
 	border-radius: 4px;
+	transition: all 0.5s cubic-bezier(0.5, 1, 0.89, 1);
 	&.occupied {
 		background: $surface2;
 	}
 	&.active {
-		transition: all 0.5s cubic-bezier(0.5, 1, 0.89, 1);
 		background-image: linear-gradient($mauve, $pink);
-		padding: 8px 0px;
-		/*min-height: 24px;*/
+		min-height: 24px;
 	}
 }

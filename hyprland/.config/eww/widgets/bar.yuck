@@ -28,7 +28,16 @@
 )
 
 (defwidget workspaces []
-		(literal :content workspaces_var)
+	(box :orientation "v" :class "workspaces" :space-evenly "false" :halign "center"
+		(button :class {workspaces_var[0]} :halign "center")
+		(button :class {workspaces_var[1]} :halign "center")
+		(button :class {workspaces_var[2]} :halign "center")
+		(button :class {workspaces_var[3]} :halign "center")
+		(button :class {workspaces_var[4]} :halign "center")
+		(button :class {workspaces_var[5]} :halign "center")
+		(button :class {workspaces_var[6]} :halign "center")
+		(button :class {workspaces_var[7]} :halign "center")
+	)
 )
 
 (defwidget clock []
@@ -40,3 +49,4 @@
 			minute
 	)
 )
+
