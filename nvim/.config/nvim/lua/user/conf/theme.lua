@@ -1,9 +1,9 @@
-local tokyonight = require("tokyonight")
+local catppuccin = require("catppuccin")
 
 local options = {
-	style = "night"
+	flavour = "mocha"
 }
 
-tokyonight.setup(options)
+catppuccin.setup(options)
 
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme catppuccin")

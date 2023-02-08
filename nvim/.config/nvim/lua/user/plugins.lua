@@ -92,8 +92,9 @@ return require("packer").startup(function(use)
 	}
 
 	use {
-		"tiagovla/tokyodark.nvim",
-		"folke/tokyonight.nvim"
+		"catppuccin/nvim", as  = "catppuccin"
+		--"tiagovla/tokyodark.nvim",
+		--"folke/tokyonight.nvim"
 	}
 
   	if packer_bootstrap then
