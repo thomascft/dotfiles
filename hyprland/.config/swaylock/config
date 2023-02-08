@@ -1,0 +1,67 @@
+## Swaylock Config
+#
+
+#
+# General
+#
+
+image=~/.dotfiles/wallpaper.png
+#screenshots
+
+
+#
+# Appearance
+#
+
+clock
+indicator
+font=Victor Mono
+font-size=24
+
+#Indicator
+indicator-radius=64
+#indicator-thickness
+
+#
+# Colors
+#
+
+# Main
+inside-color=00000000
+key-hl-color=1a1b26
+layout-text-color=16161e
+line-color=1a1b26
+ring-color=c0caf5
+separator-color=1a1b26
+text-color=1a1b26
+bs-hl-color=e0af68
+
+# Verify
+text-ver-color=1a1b26
+inside-ver-color=00000000
+line-ver-color=1a1b26
+ring-ver-color=e0af68
+
+# Wrong
+inside-wrong-color=1a1b26
+ring-wrong-color=f7768e
+text-wrong-color=f7768e
+line-wrong-color=1a1b26
+
+# Clear
+text-clear-color=1a1b26
+inside-clear-color=00000000
+ring-clear-color=a9b1d6
+line-clear-color=1a1b26
+
+# Caps Lock
+#line-caps-lock-color=
+#ring-caps-lock-color=
+#inside-caps-lock-color=
+#caps-lock-bs-hl-color=
+#caps-lock-key-hl-color=
+text-caps-lock-color=1a1b26
+
+
+# Effects
+effect-blur=8x3
