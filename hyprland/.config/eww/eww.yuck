@@ -1,0 +1,27 @@
+(include "./widgets/bar.yuck")
+
+(defwindow bar
+	:monitor 0
+	:geometry (geometry
+		:x "0px"
+		:y "0px"
+		:width "32"
+		:height "100%"
+		:anchor "center left")
+	:stacking "fg"
+	:exclusive "true"
+	(bar_widget)
+)
+
+(defwindow dashboard
+	:monitor 0
+	:geometry (geometry
+		:x "0px"
+		:y "0px"
+		:width "30%"
+		:height "100%"
+		:anchor "center left")
+	:stacking "overlay"
+	:exclusive "false"
+	(bar_widget)
+)

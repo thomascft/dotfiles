@@ -1,100 +1,88 @@
-/* Articblush */
-@define-color bg #040c16;
-@define-color contrast #020a14;
-@define-color lighter #09111b;
-@define-color fg #cce9ea;
-@define-color cursorline #15171a;
-@define-color comments #323949;
-@define-color cursor #d9d7d6;
-@define-color color0 #323949;
-@define-color color1 #E6676B;
-@define-color color2 #A2E4B8;
-@define-color color3 #e2d06a;
-@define-color color4 #92bbed;
-@define-color color5 #ecc6e8;
-@define-color color6 #80ffff;
-@define-color color7 #d2daf4;
-@define-color color8 #3d3e51;
-@define-color color9 #FF7377;
-@define-color color10 #AAF0C1;
-@define-color color11 #eadd94;
-@define-color color12 #bdd6f4;
-@define-color color13 #f9ecf7;
-@define-color color14 #b3ffff;
-@define-color color15 #edf7f8;
+@define-color base   #1e1e2e;
+@define-color mantle #181825;
+@define-color crust  #11111b;
 
-* {
-	font-family: Iosevka Semibold, Symbols Nerd Font;
-	font-size: 16px;
-}
+@define-color text     #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9399b2;
+
+@define-color blue      #89b4fa;
+@define-color lavender  #b4befe;
+@define-color sapphire  #74c7ec;
+@define-color sky       #89dceb;
+@define-color teal      #94e2d5;
+@define-color green     #a6e3a1;
+@define-color yellow    #f9e2af;
+@define-color peach     #fab387;
+@define-color maroon    #eba0ac;
+@define-color red       #f38ba8;
+@define-color mauve     #cba6f7;
+@define-color pink      #f5c2e7;
+@define-color flamingo  #f2cdcd;
+@define-color rosewater #f5e0dc;
 
 window#waybar {
-	background: transparent;
+	background: @base;
+	color: @text;
+	border-radius: 8px;
 }
 
-#custom-nix {
-	background-color: @bg;
-	background-image: url("assets/nix.svg");
-	background-size: contain;
-	background-position: center;
-	padding: 9px 17px;
-	border-radius: 42px;
+#workspaces {
+	background: @mantle;
+	border-radius: 8px;
 }
 
 #workspaces button {
-	color: @comments;
-	background: @bg;
-	padding: 4px 8px;
-	margin: 4px; 
-	border-radius: 42px;
-	transition: all 0.5s cubic-bezier(0.5, 1, 0.89, 1);
+	margin: 4px;
+	padding: 0px 4px;
+	border-radius: 8px;
 }
+
 #workspaces button.active {
-	color: @fg;
-	padding: 4px 18px;
+	background: @blue;
+	color: @mantle;
 }
 
-#custom-song {
-	background-color: @bg;
-	color: @comments;
-	padding: 4px 24px;
-	margin: 4px;
-	border-radius: 42px;
+.icon {
+	font-size: 16px;
+	margin-top: 2px;
+	padding: 0px;
+}
+.label {
+	color: @overlay1;
+	font-size: 8px;
+	margin-bottom: 2px;
+	padding: 0px;
 }
 
-#tray {
-	background: @bg;
-	margin: 4px;
-	padding: 4px 8px;
-	border-radius: 42px;
+#pulseaudio.icon {
+	color: @red;
 }
-#backlight, #pulseaudio, #network, #battery {
-	background: @bg;
-	color: @fg;
-	padding: 4px;
-	margin: 4px 0px;
+
+#backlight.icon {
+	color: @yellow;
 }
-#backlight {
-	border-radius: 42px 0px 0px 42px;
-	margin-left: 4px;
-	padding-left: 8px;
+#network.icon {
+	color: @green;
 }
-#battery {
-	border-radius: 0px 42px 42px 0px;
-	margin-right: 4px;
-	padding-right: 8px;
+#network.icon {
+	color: @green;
 }
-#clock {
-	background: @bg;
-	color: @fg;
-	padding: 4px 8px;
-	margin-left:4px;
-	border-radius: 42px 0px 0px 42px;
+#battery.icon {
+	color: @magenta;
 }
-#custom-power-menu {
-	background: @bg;
-	color: @color3;
-	border-radius: 0px 42px 42px 0px;
-	margin-right: 4px;
-	padding-right: 8px;
+
+#clock{
+	background: @mantle;
+	color: @overlay1;
+	border-radius: 8px;
+	padding: 8px;
 }

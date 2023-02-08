@@ -1,0 +1,42 @@
+(include "./vars.yuck")
+
+(defwidget bar_widget []	
+	(centerbox :orientation "vertical"
+		(box :orientation "vertical" :valign "start" :class "widgets-top"
+			(user-icon-sm)
+		)
+		(box :orientation "vertical" :class "widgets-center"
+			(workspaces)
+		)
+		(box :orientation "vertical" :class "widgets-bottom"
+			(clock)
+		)
+	)
+)
+
+(defwidget user-icon-sm []
+	(button
+		:class "btn-sm"
+		:onclick "eww open --toggle dashboard"
+		(image
+			:class "user-icon-sm"
+			:path "/home/thomas/Pictures/icon_rounded.png"
+			:image-width "16"
+			:image-height "16"
+		)
+	)
+)
+
+(defwidget workspaces []
+		(literal :content workspaces_var)
+)
+
+(defwidget clock []
+	(box
+		:class "clock container-sm"
+		:orientation "vertical"
+		:valign "end"
+			hour
+			minute
+	)
+)

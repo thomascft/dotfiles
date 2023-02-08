@@ -1,0 +1,82 @@
+$base   :#1e1e2e;
+$mantle :#181825;
+$crust  :#11111b;
+
+$text     :#cdd6f4;
+$subtext0 :#a6adc8;
+$subtext1 :#bac2de;
+
+$surface0 :#313244;
+$surface1 :#45475a;
+$surface2 :#585b70;
+
+$overlay0 :#6c7086;
+$overlay1 :#7f849c;
+$overlay2 :#9399b2;
+
+$blue      :#89b4fa;
+$lavender  :#b4befe;
+$sapphire  :#74c7ec;
+$sky       :#89dceb;
+$teal      :#94e2d5;
+$green     :#a6e3a1;
+$yellow    :#f9e2af;
+$peach     :#fab387;
+$maroon    :#eba0ac;
+$red       :#f38ba8;
+$mauve     :#cba6f7;
+$pink      :#f5c2e7;
+$flamingo  :#f2cdcd;
+$rosewater :#f5e0dc;
+
+* {
+	font-family: Roboto;
+	font-size: 10;
+}
+
+.container-sm {
+	color: $overlay1; 
+	background: $surface0;
+	padding: 4px;
+	border-radius: 8px;
+}
+
+.btn-sm {
+	all: unset;
+	padding: 2px;
+	background: $surface0;
+	border-radius: 50%;
+}
+
+.user-icon-sm {
+	border-radius: 16px;
+}
+
+window {
+	background: transparent;
+	& > box {
+		background: $base;
+		color: $text;
+		border-radius: 8px;
+		margin: 8px 0px 8px 8px;
+		padding: 8px;
+	}
+}
+
+.workspaces button {
+	all: unset;
+	min-width: 8px;
+	min-height: 8px;
+	margin: 2px 0px;
+	background: $surface0;
+	border-radius: 4px;
+	&.occupied {
+		background: $surface2;
+	}
+	&.active {
+		transition: all 0.5s cubic-bezier(0.5, 1, 0.89, 1);
+		background-image: linear-gradient($mauve, $pink);
+		padding: 8px 0px;
+		/*min-height: 24px;*/
+	}
+}
