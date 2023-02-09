@@ -8,7 +8,13 @@
 		(box :orientation "vertical" :class "widgets-center"
 			(workspaces)
 		)
-		(box :orientation "vertical" :class "widgets-bottom"
+		(box 
+			:class "widgets-bottom" 
+			:spacing 8
+			:orientation "vertical" 
+			:space-evenly false
+			:valign "end"
+			(battery)
 			(clock)
 		)
 	)
@@ -18,6 +24,7 @@
 	(button
 		:class "btn-sm"
 		:onclick "eww open --toggle dashboard"
+		:halign "center"
 		(image
 			:class "user-icon-sm"
 			:path "/home/thomas/Pictures/icon_rounded.png"
@@ -37,6 +44,19 @@
 		(button :class {workspaces_var[5]} :halign "center")
 		(button :class {workspaces_var[6]} :halign "center")
 		(button :class {workspaces_var[7]} :halign "center")
+	)
+)
+
+(defwidget battery []
+	(box :class "battery" :halign "center" :space-evenly false
+		(box :halign "center"
+			(progress
+				:value "${EWW_BATTERY.BAT0.capacity}"
+				:halign "center"
+				:width 12
+			)
+		)
+		(box :halign "start" :valign "center")
 	)
 )
 

@@ -55,7 +55,7 @@ $rosewater :#f5e0dc;
 window {
 	background: transparent;
 	& > box {
-		background: $base;
+		background: $mantle;
 		color: $text;
 		border-radius: 8px;
 		margin: 8px 0px 8px 8px;
@@ -70,12 +70,38 @@ window {
 	margin: 2px 0px;
 	background: $surface0;
 	border-radius: 4px;
-	transition: all 0.5s cubic-bezier(0.5, 1, 0.89, 1);
+	transition: all 0.4s cubic-bezier(0.5, 1, 0.89, 1);
 	&.occupied {
 		background: $surface2;
 	}
 	&.active {
 		background-image: linear-gradient($mauve, $pink);
 		min-height: 24px;
+	}
+}
+.battery {
+	box:nth-child(1){
+		background: $surface0;
+		padding: 1px;
+		border-radius: 4px;
+		min-width: 14px;
+		progressbar {
+			background: $base;
+			border-radius: 4px;
+			padding: 2px;
+			trough, progress {
+				border: none;
+				min-width: 8px;
+				min-height: 4px;
+				border-radius: 4px;
+			}
+			progress {
+				background: $overlay0;
+			}
+		}
+	}
+	box:nth-child(2){
+		background: $surface0;
+		padding: 1px;
 	}
 }
