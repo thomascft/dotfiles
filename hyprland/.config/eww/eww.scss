@@ -91,12 +91,15 @@ window {
 			padding: 2px;
 			trough, progress {
 				border: none;
-				min-width: 8px;
+				min-width: 1px;
 				min-height: 4px;
 				border-radius: 4px;
 			}
+			trough {
+				background: $base;
+			}
 			progress {
-				background: $overlay0;
+				background: $overlay2;
 			}
 		}
 	}
