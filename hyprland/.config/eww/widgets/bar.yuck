@@ -51,7 +51,7 @@
 	(box :class "battery" :halign "center" :space-evenly false
 		(box :halign "center"
 			(progress
-				:value {EWW_BATTERY.BAT0.capacity}
+				:value {EWW_BATTERY["${EWW_BATTERY.BAT0 != "null" ? "BAT0" : "BAT1"}"].capacity}
 				:halign "center"
 				:width 12
 			)
