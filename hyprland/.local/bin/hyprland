@@ -4,4 +4,4 @@ export XDG_SESSION_DESKTOP=Hyprland
 
 export SDL_VIDEODRIVER=wayland
 export MOZ_ENABLE_WAYLAND=1
-exec Hyprland
+exec systemd-inhibit --what=handle-power-key Hyprland
