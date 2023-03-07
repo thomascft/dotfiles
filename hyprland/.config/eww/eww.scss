@@ -1,33 +1,49 @@
-$base   :#1e1e2e;
-$mantle :#181825;
-$crust  :#11111b;
+$bg: #1a1b26;
+$bg-dark: #16161e;
+$bg-float: #16161e;
+$bg-highlight: #292e42;
+$bg-popup: #16161e;
+$bg-search: #3d59a1;
+$bg-sidebar: #16161e;
+$bg-statusline: #16161e;
+$bg-visual: #33467c;
+$black: #15161e;
+$blue: #7aa2f7;
+$blue0: #3d59a1;
+$blue1: #2ac3de;
+$blue2: #0db9d7;
+$blue5: #89ddff;
+$blue6: #b4f9f8;
+$blue7: #394b70;
+$border: #15161e;
+$border-highlight: #27a1b9;
+$comment: #565f89;
+$cyan: #7dcfff;
+$dark3: #545c7e;
+$dark5: #737aa2;
+$error: #db4b4b;
+$fg: #c0caf5;
+$fg-dark: #a9b1d6;
+$fg-float: #c0caf5;
+$fg-gutter: #3b4261;
+$fg-sidebar: #a9b1d6;
+$green: #9ece6a;
+$green1: #73daca;
+$green2: #41a6b5;
+$hint: #1abc9c;
+$info: #0db9d7;
+$magenta: #bb9af7;
+$magenta2: #ff007c;
+$none: NONE;
+$orange: #ff9e64;
+$purple: #9d7cd8;
+$red: #f7768e;
+$red1: #db4b4b;
+$teal: #1abc9c;
+$terminal-black: #414868;
+$warning: #e0af68;
+$yellow: #e0af68;
 
-$text     :#cdd6f4;
-$subtext0 :#a6adc8;
-$subtext1 :#bac2de;
-
-$surface0 :#313244;
-$surface1 :#45475a;
-$surface2 :#585b70;
-
-$overlay0 :#6c7086;
-$overlay1 :#7f849c;
-$overlay2 :#9399b2;
-
-$blue      :#89b4fa;
-$lavender  :#b4befe;
-$sapphire  :#74c7ec;
-$sky       :#89dceb;
-$teal      :#94e2d5;
-$green     :#a6e3a1;
-$yellow    :#f9e2af;
-$peach     :#fab387;
-$maroon    :#eba0ac;
-$red       :#f38ba8;
-$mauve     :#cba6f7;
-$pink      :#f5c2e7;
-$flamingo  :#f2cdcd;
-$rosewater :#f5e0dc;
 
 * {
 	font-family: Roboto;
@@ -35,8 +51,8 @@ $rosewater :#f5e0dc;
 }
 
 .container-sm {
-	color: $overlay1; 
-	background: $surface0;
+	color: $fg-float; 
+	background: $bg-highlight;
 	padding: 4px;
 	border-radius: 8px;
 }
@@ -44,7 +60,7 @@ $rosewater :#f5e0dc;
 .btn-sm {
 	all: unset;
 	padding: 2px;
-	background: $surface0;
+	background: $bg-highlight;
 	border-radius: 50%;
 }
 
@@ -55,8 +71,8 @@ $rosewater :#f5e0dc;
 window {
 	background: transparent;
 	& > box {
-		background: $mantle;
-		color: $text;
+		background: $bg;
+		color: $fg;
 		border-radius: 8px;
 		margin: 8px 0px 8px 8px;
 		padding: 8px;
@@ -68,25 +84,25 @@ window {
 	min-width: 8px;
 	min-height: 8px;
 	margin: 2px 0px;
-	background: $surface0;
+	background: $bg-highlight;
 	border-radius: 4px;
 	transition: all 0.4s cubic-bezier(0.5, 1, 0.89, 1);
 	&.occupied {
-		background: $surface2;
+		background: $comment;
 	}
 	&.active {
-		background-image: linear-gradient($mauve, $pink);
+		background: $blue;
 		min-height: 24px;
 	}
 }
 .battery {
 	box:nth-child(1){
-		background: $surface0;
+		background: $bg-highlight;
 		padding: 1px;
 		border-radius: 4px;
 		min-width: 14px;
 		progressbar {
-			background: $base;
+			background: $bg;
 			border-radius: 4px;
 			padding: 2px;
 			trough, progress {
@@ -96,15 +112,15 @@ window {
 				border-radius: 4px;
 			}
 			trough {
-				background: $base;
+				background: $bg;
 			}
 			progress {
-				background: $overlay2;
+				background: $comment;
 			}
 		}
 	}
 	box:nth-child(2){
-		background: $surface0;
+		background: $bg-highlight;
 		padding: 1px;
 	}
 }

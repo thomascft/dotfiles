@@ -91,11 +91,9 @@ return require("packer").startup(function(use)
 		config = function() require("user.conf.alpha") end,
 	}
 
-	use {
-		"catppuccin/nvim", as  = "catppuccin"
-		--"tiagovla/tokyodark.nvim",
-		--"folke/tokyonight.nvim"
-	}
+	use {"norcalli/nvim-colorizer.lua", config = function () require("colorizer").setup() end}
+
+	use "folke/tokyonight.nvim"
 
   	if packer_bootstrap then
 		require("packer").sync()

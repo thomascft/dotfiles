@@ -1,7 +1,8 @@
 local wezterm = require("wezterm")
 
-local colorscheme = "Catppuccin Mocha"
-local colors = wezterm.color.get_builtin_schemes()[colorscheme]
+local colorscheme = "Tokyo Night Night"
+local colors = wezterm.color.get_builtin_schemes()[colorscheme] or
+	wezterm.color.load_scheme(os.getenv("HOME") .. "/.config/wezterm/colors/tokyonight_night.toml")
 
 local options = {
   font = wezterm.font "Victor Mono SemiBold",
