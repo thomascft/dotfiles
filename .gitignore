@@ -1,1 +1,4 @@
 **/plugin/packer_compiled.lua
+PKGBUILDs/*/src
+PKGBUILDs/*/pkg
+PKGBUILDs/*/*.pkg.tar.zst
