@@ -1,0 +1,22 @@
+# Maintainer: Thomas Croft <thomas.croft@proton.me>
+
+pkgname=meta-desktop
+pkgver=0
+pkgrel=1
+arch=(
+	"x86_64"
+)
+depends=(
+	'wezterm'
+	'brave-bin'
+	'logseq-desktop-wayland-bin'
+	'discord'
+	'anki'
+	'noto-fonts'
+	'noto-fonts-cjk'
+	'noto-fonts-emoji'
+	'noto-fonts-extra'
+	'ttf-nerd-fonts-symbols-1000-em'
+	'ttf-victor-mono'
+)
+optdepends=()

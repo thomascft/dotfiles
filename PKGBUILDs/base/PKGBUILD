@@ -1,0 +1,25 @@
+# Maintainer: Thomas Croft <thomas.croft@proton.me>
+
+pkgname=meta-base
+pkgver=0
+pkgrel=1
+arch=(
+	"x86_64"
+	)
+depends=(
+	'base'
+	'ufw'
+	'zip'
+	'unzip'
+	'p7zip'
+	'man-db'
+	'ripgrep'
+	'fzf'
+	'git'
+	'linux-firmware'
+	)
+optdepends=(
+	'linux'
+	'linux-headers'
+	'iwd'
+	)

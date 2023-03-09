@@ -1,0 +1,19 @@
+# Maintainer: Thomas Croft <thomas.croft@proton.me>
+
+pkgname=meta-devel
+pkgver=0
+pkgrel=1
+arch=(
+	"x86_64"
+	)
+depends=(
+	'rustup'
+	'nerdctl-git'
+	'sshfs'
+	'wireguard-tools'
+	'tailscale'
+	'go'
+	'cmake'
+	'github-cli'
+	)
+optdepends=()

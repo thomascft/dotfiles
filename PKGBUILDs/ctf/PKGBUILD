@@ -1,0 +1,13 @@
+# Maintainer: Thomas Croft <thomas.croft@proton.me>
+
+pkgname=meta-ctf
+pkgver=0
+pkgrel=1
+pkgdesc=""
+arch=(
+	"x86_64"
+)
+depends=(
+
+)
+optdepends=()

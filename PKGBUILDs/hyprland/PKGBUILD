@@ -1,0 +1,22 @@
+# Maintainer: Thomas Croft <thomas.croft@proton.me>
+
+pkgname=meta-hyprland
+pkgver=0
+pkgrel=1
+epoch=
+pkgdesc=""
+arch=(
+	"x86_64"
+	)
+depends=(
+	'hyprland-git'
+	'wl-clipboard'
+	'wofi'
+	'eww-wayland-git'
+	'swww-git'
+	'wlogout'
+	'dunst'
+	'socat' # ~/.config/eww/scripts/workspaces.sh
+	'jq' # ~/.config/eww/scripts/workspaces.sh
+	)
+optdepends=()

@@ -1,0 +1,16 @@
+# Maintainer: Thomas Croft <thomas.croft@proton.me>
+
+pkgname=meta-graphic-design
+pkgver=0
+pkgrel=1
+epoch=
+pkgdesc=""
+arch=(
+	"x86_64"
+	)
+depends=(
+	'gimp'
+	'inkscape'
+	'krita'
+	)
+optdepends=()
