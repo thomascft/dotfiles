@@ -4,6 +4,8 @@ offset = 16x16
 corner_radius = 8
 frame_color = "#363a4f"
 separator_color= frame
+highlight = "#7aa2f7"
+progress_bar_corner_radius = 4
 
 [urgency_low]
 background = "#1E1E2E"
