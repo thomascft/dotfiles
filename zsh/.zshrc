@@ -1,4 +1,3 @@
-[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -11,7 +10,7 @@ zstyle :compinstall filename '/home/thomas/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
+[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 [[ -d "$HOME/.local/share/zap/" ]] || zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
 
 plug "zsh-users/zsh-syntax-highlighting"
