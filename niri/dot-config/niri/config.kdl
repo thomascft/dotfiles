@@ -240,3 +240,7 @@ binds {
 
     Mod+Shift+P { power-off-monitors; }
 }
+
+debug {
+	keep-laptop-panel-on-when-lid-is-closed
+}
