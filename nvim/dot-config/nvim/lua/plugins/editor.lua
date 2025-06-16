@@ -45,6 +45,10 @@ return {
 		opts = {},
 	},
 	{
+		"windwp/nvim-ts-autotag",
+		opts = {},
+	},
+	{
 		"saghen/blink.cmp",
 		version = "1.*",
 		lazy = false,
