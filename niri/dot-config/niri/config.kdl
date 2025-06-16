@@ -61,12 +61,12 @@ layout {
         inactive-color "#505050"
     }
 
-    border {
-        width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
-    }
+	border {
+		width 4
+		active-color "#9ece6a"
+		inactive-color "#c0caf5"
+		urgent-color "#9b0000"
+	}
 
     shadow {
 		on
