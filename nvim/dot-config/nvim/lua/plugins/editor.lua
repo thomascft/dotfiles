@@ -68,16 +68,39 @@ return {
 		"neovim/nvim-lspconfig",
 	},
 	{
+		"folke/ts-comments.nvim",
+		event = "VeryLazy",
+		opts = {},
+	},
+	{
 		"folke/lazydev.nvim",
 		ft = "lua",
-		opts = {},
+		cmd = "LazyDev",
+		opts = {
+			library = {
+				{ path = "snacks.nvim", words = { "Snacks" } },
+			},
+		},
 	},
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
-		opts = {},
+		opts = {
+			spec = {
+				mode = { "n", "v" },
+				{ "<leader>c", group = "code" },
+				{ "<leader>x", group = "diagnostics" },
+				{ "<leader>f", group = "find" },
+				{ "<leader>s", group = "symbols" },
+				{ "[", group = "prev" },
+				{ "]", group = "next" },
+				{ "g", group = "goto" },
+				{ "sa", group = "surround" },
+				{ "z", group = "fold" },
+			},
+		},
 		keys = {
-			{ "<leader>?", function() require("which-key").show() end, desc = "Show Keymaps" },
+			{ "<leader>?", function() require("which-key").show({global = false}) end, desc = "Show Keymaps" },
 		}
 	},
 	{
