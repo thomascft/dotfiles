@@ -63,9 +63,9 @@ layout {
 
 	border {
 		width 4
-		active-color "#9ece6a"
-		inactive-color "#c0caf5"
-		urgent-color "#9b0000"
+		active-color "#c0caf5"
+		inactive-color "#16161e"
+		urgent-color "#f7768e"
 	}
 
     shadow {
