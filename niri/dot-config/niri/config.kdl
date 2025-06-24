@@ -233,7 +233,6 @@ binds {
     Mod+Shift+Q { quit; }
     Ctrl+Alt+Delete { quit; }
 
-
 }
 
 debug {
