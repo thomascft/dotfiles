@@ -36,6 +36,8 @@ daemonize = false
 animate = true
 
 [binds]
+prev = "control-p"
+next = "control-n"
 
 [files]
 config = "~/.config/sherlock/config.toml"
