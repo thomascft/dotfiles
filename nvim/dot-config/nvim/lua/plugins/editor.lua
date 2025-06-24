@@ -108,4 +108,8 @@ return {
 		event = "BufReadPre",
 		opts = {}
 	},
+	{
+		"https://github.com/lewis6991/gitsigns.nvim",
+		opts = {},
+	},
 }
