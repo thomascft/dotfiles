@@ -1,0 +1,62 @@
+[default_apps]
+terminal = "ghostty -e"
+browser = "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=launch-script.sh --file-forwarding app.zen_browser.zen @@u %u @@"
+
+[units]
+lengths = "feet"
+weights = "lbs"
+volumes = "l"
+temperatures = "F"
+currency = "usd"
+
+[debug]
+try_suppress_errors = false
+try_suppress_warnings = false
+app_paths = []
+
+[appearance]
+width = 900
+height = 593
+gsk_renderer = "cairo"
+icon_paths = []
+icon_size = 22
+search_icon = false
+use_base_css = true
+status_bar = true
+opacity = 1.0
+mod_key_ascii = ["⇧", "⇧", "⌘", "⌘", "⎇", "✦", "✦", "⌘"]
+search_bar_icon = "system-search-symbolic"
+search_bar_icon_back = "go-previous-symbolic"
+search_icon_size = 22
+
+[behavior]
+cache = "~/.cache/sherlock/sherlock_desktop_cache.json"
+caching = false
+daemonize = false
+animate = true
+
+[binds]
+
+[files]
+config = "~/.config/sherlock/config.toml"
+css = "~/.config/sherlock/main.css"
+fallback = "~/.config/sherlock/fallback.json"
+alias = "~/.config/sherlock/sherlock_alias.json"
+ignore = "~/.config/sherlock/sherlockignore"
+actions = "~/.config/sherlock/sherlock_actions.json"
+
+[runtime]
+multi = false
+center = false
+photo_mode = false
+display_raw = false
+
+[expand]
+enable = false
+edge = "top"
+margin = 0
+
+[backdrop]
+enable = false
+opacity = 0.6
+edge = "top"
