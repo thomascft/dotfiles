@@ -1,0 +1,9 @@
+[Unit]
+Description=A deterministic dynamic output configuration tool that automatically detects and configures connected outputs based on a set of profiles. 
+After=graphical-session.target
+
+[Service]
+ExecStart=shikane
+
+[Install]
+WantedBy=graphical-session.target

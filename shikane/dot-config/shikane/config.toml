@@ -1,0 +1,23 @@
+
+[[profile]]
+name = "default"
+
+[[profile.output]]
+enable = true 
+search = ["m=0x075B", "s=", "v=LG Display"]
+
+[[profile]]
+name = "work"
+
+[[profile.output]]
+enable = true
+search = ["m=LG HDR 4K", "s=0x0001D796", "v=LG Electronics"]
+mode = "3840x2160@59.997Hz"
+position = "0,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile.output]]
+enable = false
+search = ["m=0x075B", "s=", "v=LG Display"]
